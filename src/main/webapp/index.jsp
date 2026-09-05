@@ -17,6 +17,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
 		  rel="stylesheet">
+	<script src="https://kit.fontawesome.com/d9a1097e3c.js" crossorigin="anonymous"></script>
 	<!--  Stylesheets -->
 	<link rel="stylesheet" href="styles.css">
 </head>
@@ -107,6 +108,20 @@
 
 	<div class="reviews">
 		<h2>See What Our Customers Say</h2>
+		<div class="review-card">
+			<div class="review-rating">
+				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+			</div>
+			<blockquote class="review-message">
+				"Moffat Bay Marina is simply the finest marina I've docked at along the coast. The staff anticipated every need before I could ask."
+			</blockquote>
+			<p class="review-author">- James Corleone</p>
+			<p class="review-date">August 23, 2026</p>
+		</div>
 	</div>
 </main>
 <footer>
@@ -127,7 +142,7 @@
 		</div>
 	</div>
 	<hr>
-	<p>&copy; 2026 - Moffat Bay Marina <span id="team">Created By: Group C - CSD460</span></p>
+	<p>&copy; 2026 - Moffat Bay Marina <br/><span id="team">Created By: Group C - CSD460</span></p>
 </footer>
 </body>
 </html>
