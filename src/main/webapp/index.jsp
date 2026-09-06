@@ -19,7 +19,7 @@
 		  rel="stylesheet">
 	<script src="https://kit.fontawesome.com/d9a1097e3c.js" crossorigin="anonymous"></script>
 	<!--  Stylesheets -->
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/landingpage.css">
 </head>
 <body>
 <header>
