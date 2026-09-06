@@ -1,0 +1,545 @@
+/*-----MAIN SECTION-----*/
+
+:root {
+    --Main-Background: #0D1B2A;
+    --Secondary-Background: #F4F0E8;
+    --Tertiary-Background: rgb(53,62,74);
+
+    --Accent: #1A7073;
+    --Cards: #FDFBF5;
+    --Muted-Text: #acacac;
+
+     --Heading-Font: 'Inika', sans-serif;
+     --Main-Font: 'Mulish', sans-serif;
+
+    --Border-Radius: 10px;
+    --Card-Shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   background-color: var(--Secondary-Background); 
+   color:#111;
+    font-family: var(--Main-Font);
+    margin:0;
+    min-height: 100vh;
+    padding: 0;
+    
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--Heading-Font);
+}
+
+a {
+    color: inherit
+}
+
+button,input {
+    font: inherit;
+}
+
+
+/*-----------------------------------------------------
+
+-----HEADER SECTION-----*/
+
+.website-header {
+    background-color: var(--Main-Background);
+    width: 100%;
+}
+
+.navbar {
+    align-items: center;
+    border-bottom: 2px solid #05090d;
+    display: flex;
+    gap: 25px;
+    margin: 0 auto;
+    max-width: 1150px;
+    min-height: 60px;
+    width: 85%;
+}
+
+.header-logo {
+     color: white;
+     font-family: var(--Main-Font);
+     font-size: 25px;
+    font-weight: bold;
+    margin-left:  -100px;
+    margin-right:  auto;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-page {
+    border-radius: 20px;
+    color: var(--Muted-Text);
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: 
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-page:hover, .nav-page:active {
+    background-color: var(--Accent);
+    color: white;
+}
+
+.nav-buttons, .nav-links {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+.nav-feat {
+    background-color: var(--Accent);
+     border-radius: 20px;
+     color: var(--Muted-Text);
+    padding: 8px 14px;
+    text-decoration: none;
+    transition:
+    color 0.2 ease,
+    opacity 0.2 ease;
+}
+
+.nav-feat:hover {
+    color: white;
+    opacity: 0.92;
+}
+
+
+/*-----------------------------------------------------
+
+-----PAGE HERO SECTION-----*/
+.page-hero {
+     background-color: var(--Main-Background);
+    color: white;
+    padding: 70px 20px 65px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 40px;
+    margin: 0 0 12px;
+}
+
+.page-hero p {
+    color: var(--Muted-Text);
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0 auto;
+     max-width: 700px;
+}
+
+
+/*-----------------------------------------------------
+
+-----PAGE CONTENT SECTION-----*/
+.page-section {
+    min-height: 550px;
+
+    padding: 55px 20px 80px;
+
+    background-color: var(--Secondary-Background);
+}
+
+.content-shell {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/*-----------------------------------------------------
+
+-----LOGIN SECTION-----*/
+
+.login-page {
+    align-items: center;
+    background-color: var(--Main-Background);
+    display: grid;
+    gap: 70px;
+    grid-template-columns: 0.85fr 1.15fr;
+    min-height: calc(100vh - 60px);
+    padding: 65px 5% 80px;
+}
+
+
+/*-----------------------------------------------------
+
+-----CARDS SECTION-----*/
+
+.content-card {
+    border-radius: var(--Border-Radius);
+    box-shadow: var(--Card-Shadow);
+    padding: 35px;
+}
+
+.card-description {
+   color: #666;
+   line-height: 1.5;
+    margin-top: -5px;
+    margin-bottom: 25px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+.login-card {
+ background-color: #FDFBF5;;
+ border-radius: 12px;
+ box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+ overflow: auto;
+ transform: translate(850px,0px);
+ width: 100%;
+
+}
+
+.login-card h1 {
+    color: var(--Main-Background);
+    font-size: 30px;
+    margin: 0 0 5px;
+}
+
+
+
+/*-----------------------------------------------------
+
+-----FORMS SECTION-----*/
+
+
+.login-form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.login-form-wrapper {
+    width: 100%;
+
+    max-width: 680px;
+}
+
+.form-grid {
+    display: grid;
+    gap: 25px;
+     grid-template-columns: 1fr 1fr;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--Main-Background); 
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #111;
+    padding: 13px 14px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.form-group input:focus {
+    border-color: var(--Accent);
+    box-shadow: 0 0 0 3px rgba(26, 112, 115, 0.15);
+    outline: none;
+}
+
+
+
+
+/*-----------------------------------------------------
+
+-----BUTTONS SECTION-----*/
+
+.sign-button {
+    background-color: var(--Accent);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+    width: 25;
+}
+
+.sign-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+/*-----------------------------------------------------
+
+-----SIGNUP SECTION-----*/
+
+.signup-link {
+    color: #666;
+    font-weight: 1000;
+    margin-top: 25px;
+    text-align: center;
+    transform: translateX(75px);
+}
+
+.signup-link a {
+    color: var(--Accent);
+    font-weight: 1000;
+    text-decoration: none;
+   
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/*-----------------------------------------------------
+
+-----FOOTER SECTION-----*/
+
+.website-footer {
+    background-color: var(--Tertiary-Background);
+    color: var(--Muted-Text);
+    padding: 30px 0 30 px;
+}
+
+.footer-content {
+    margin: 0 auto;
+    max-width: 1150px;
+    width: 85%;
+}
+
+.footer-main {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+     
+}
+
+.footer-logo h2 {
+    color: white;
+    font-size: 20px;
+    margin-top: 0;  
+}
+
+.footer-logo p {
+   line-height: 1.6; 
+   max-width: 400px;   
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: var(--Muted-Text);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+   border-top: 1px solid #5b626c; 
+    font-size: 15px;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+
+/*-----------------------------------------------------
+
+-----TABLET SECTION-----*/
+
+@media screen and (max-width: 950px) {
+
+    .login-page {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .login-intro,
+    .login-form-wrapper {
+        max-width: 720px;
+    }
+}
+
+
+/*-----------------------------------------------------
+
+-----SMALL TABLET SECTION-----*/
+
+@media screen and (max-width: 800px) {
+
+    .navbar {
+        flex-wrap: wrap;
+
+        padding: 12px 0;
+    }
+
+    .logo {
+        width: 100%;
+
+        margin-bottom: 8px;
+    }
+
+    .nav-links,
+    .nav-actions {
+        flex-wrap: wrap;
+    }
+
+    .waitlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        flex-direction: column;
+    }
+}
+
+
+/*-----------------------------------------------------
+
+-----MOBILE SECTION-----*/
+
+@media screen and (max-width: 600px) {
+
+    .page-hero {
+        padding: 50px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 34px;
+    }
+
+
+    .login-page {
+        padding: 45px 20px 60px;
+    }
+
+    .login-intro h1 {
+        font-size: 36px;
+    }
+
+    .login-card,
+    .content-card {
+        padding: 25px 20px;
+    }
+
+    .login-form,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+
+    /* login error */
+
+    .login-error {
+        padding: 13px 14px;
+    }
+
+
+    /* login confirmation */
+
+    .confirmation-page {
+        min-height: 600px;
+
+        padding: 45px 20px;
+    }
+
+    .confirmation-card {
+        padding: 40px 25px 35px;
+    }
+
+    .confirmation-icon {
+        width: 68px;
+        height: 68px;
+
+        font-size: 36px;
+    }
+
+    .confirmation-card h1 {
+        font-size: 30px;
+    }
+
+    .confirmation-message {
+        font-size: 17px;
+    }
+
+    .confirmation-details {
+        font-size: 15px;
+    }
+
+    .confirmation-divider {
+        width: 90%;
+    }
+
+    .confirmation-login-button {
+        width: 100%;
+    }
+
+
+    /* Reservation summary */
+
+    .summary-row {
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .summary-value {
+        text-align: left;
+    }
+
+
+    /* Buttons */
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .sign-button {
+        width: 100%;
+    }
+}
