@@ -46,9 +46,12 @@
 			<h1>Moffat Bay Marina</h1>
 			<p id="short-text">Whether you are staying for a weekend getaway or a full season, reserve your boat slip
 				online with ease and prepare for your next coastal adventure.</p>
+				
+			<jsp:useBean id="database" class="databaseBean.Database" scope="page" />
+				
 			<div class="check-availability-form">
 				<h4>Check Availability</h4>
-				<form>
+				<form action="index.jsp" method="POST">
 					<div class="form-row">
 						<div class="form-group">
 							<label for="arrivalDate">Arrival Date:</label>
@@ -60,13 +63,94 @@
 						</div>
 						<div class="form-group">
 							<label for="vesselLength">Vessel Length:</label>
-							<input type="number" id="vesselLength" name="vesselLength" step="0.1" required>
+							<input type="number" id="vesselLength" name="vesselLength" step="0.1" placeholder="Select ft." required>
 						</div>
 					</div>
 					<div class="form-row">
-						<input type="submit" value="Search Available Slips">
+						<input name="checkAvailability" type="submit" value="Search Available Slips">
 					</div>
 				</form>
+
+				<%
+				if (request.getParameter("checkAvailability") != null) {
+				
+				    String arrivalDate = request.getParameter("arrivalDate");
+				    String departureDate = request.getParameter("departureDate");
+				
+				    double vesselLength = Double.parseDouble(
+				        request.getParameter("vesselLength")
+				    );
+				
+				    // Check vessel size before querying database
+				    if (vesselLength <= 0 || vesselLength > 50) {
+				%>
+				
+			    <div class="availability-result">
+			
+			        <h4>No Slips Available</h4>
+			
+			        <p>
+			            Moffat Bay Marina can only accommodate vessels
+			            up to 50 feet in length. Please enter a different vessel length.
+			        </p>
+			
+			    </div>
+				
+				<%
+				    } else {
+				
+				        boolean available = database.checkAvailability(arrivalDate, departureDate, vesselLength);
+				
+				        System.out.println("Availability returned to JSP: " + available);
+				
+				        if (available) {
+				%>
+				
+			    <div class="availability-result">
+			
+			        <h4>Available Slips Found</h4>
+			
+			        <p>
+			            Looks like we have availability for your selected dates.
+			            Please continue to the reservation page to finish your booking.
+			        </p>
+			
+			        <form action="reservation.jsp" method="POST">
+			
+			            <input type="hidden" name="arrivalDate"value="<%= arrivalDate %>">
+			
+			            <input type="hidden" name="departureDate" value="<%= departureDate %>">
+			
+			            <input type="hidden" name="vesselLength" value="<%= vesselLength %>">
+			
+			            <input type="submit" value="Continue to Reservation">
+			
+			        </form>
+			
+			    </div>
+				
+				<%
+				        } else {
+				%>
+				
+			    <div class="availability-result">
+			
+			        <h4>No Slips Available</h4>
+			
+			        <p>
+			            No slips are currently available for the selected dates
+			            and vessel length. Please try different dates.
+			        </p>
+			
+			    </div>
+				
+				<%
+				        }
+				
+				        database.closeConnection();
+				    }
+				}
+				%>
 			</div>
 		</div>
 		<div class="hero-right"></div>
