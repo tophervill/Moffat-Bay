@@ -27,14 +27,14 @@
 	<nav class="navbar">
 		<div class="nav-start">Moffat Bay Marina</div>
 		<div class="nav-middle mobile-hidden">
-			<a href="#" class="active">Home</a>
+			<a href="index.jsp" class="active">Home</a>
 			<a href="#">Attractions</a>
 			<a href="#">About Us</a>
 			<a href="#">Contact Us</a>
 		</div>
 		<div class="nav-end mobile-hidden">
 			<a href="#">Check Reservation</a>
-			<a href="#">Account</a>
+			<a href="Login_Page.jsp">Account</a>
 		</div>
 	</nav>
 </header>
