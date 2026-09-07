@@ -92,7 +92,7 @@
             <div class="confirmation-actions">
 
                 <a class="primary-button confirmation-login-button"
-                   href="${pageContext.request.contextPath}/login.jsp">
+                   href="${pageContext.request.contextPath}/Login_Page.jsp">
 
                     Go to Login
 

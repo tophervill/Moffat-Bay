@@ -404,7 +404,7 @@
 
                     Already have an account?
 
-                    <a href="#">
+                    <a href="Login_Page.jsp">
                         Log In
                     </a>
 

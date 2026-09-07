@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,61 +24,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap"
     rel="stylesheet">
 
-    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login_page.css">
     
 </head>
-
-    
-
-<!-----------------------------------------------------
-
------NAVIGATION BAR----->
-    <header class="website-header">
-        <nav class="navbar">
-            <a class="header-logo"
-            href="#">
-            Moffat Bay Marina
-        </a>
-
-         <div class="nav-links">
-
-            <a class="nav-page" 
-            href="#">
-                Home
-            </a>
-
-            <a class="nav-page"
-               href="#">
-                Attractions
-            </a>
-
-            <a class="nav-page"
-               href="#">
-                About Us
-            </a>
-
-            <a class="nav-page"
-               href="#">
-                Contact Us
-            </a>
-
-        </div>
-
-         
-        <div class="nav-buttons">
-
-            <a class="nav-feat"
-               href="#">
-                Check Reservation
-            </a>
-
-            <a class="nav-feat"
-               href="#">
-                Account
-            </a>
-        </nav>
-    </header>
-
 
 
 <!-----------------------------------------------------
@@ -84,6 +34,8 @@
 -----LOGIN FORM----->
 
 <body>
+
+ <%@ include file="includes/header.jsp" %>
      <main class="login-page">
           
         <section class="login-form-wrapper">
@@ -135,11 +87,53 @@
                 Sign In
             </button>
         </div>
+        
+<!-----------------------------------------------------
+
+-----Add User to Application's session----->
+
+	<script>function Values()
+	document.getElementById("username").value = "username@email.com";
+    document.getElementById("password").value = "Password";
+	</script>
+	
+	<!-- 
+		This code area below must be revisited due to issues with redirecting. 
+		Page does NOT load due to JSP values -->
+        
+    
+<%-- 	<%
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+
+    if (username != null && !username.trim().isEmpty()) {
+        session.setAttribute("user", username);
+        
+        response.sendRedirect("#");   
+    }
+    
+    else {
+    	response.sendRedirect("login.jsp?error=InvalidName");
+    }
+    
+    if (password != null && !password.trim().isEmpty()) {
+        session.setAttribute("pass", password);
+        
+        response.sendRedirect("#");   
+    }
+    
+    else {
+    	response.sendRedirect("login.jsp?error=InvalidPass");
+    }
+	%> --%>
+	
+	
+	<!----------------------------------------------------->
 
         <div class="signup-link">
 
         Don't have an account yet? <br> <br>
-        <a href="#">
+        <a href="register.jsp">
         Register your free account here.
         </a>
         </div>
@@ -151,66 +145,11 @@
     </section>
 </main>
 
+ <%@ include file="includes/footer.jsp" %>
 
 
 </body>
 
-
-<!-----------------------------------------------------
-
------FOOTER----->
-<footer class="website-footer">
-
-    <div class="footer-content">
-
-        <div class="footer-main">
-
-            <div class="footer-logo">
-
-                <h2>Moffat Bay Marina</h2>
-
-                <p>
-                    Long-term marina slip reservations on
-                    Joviedsa Island in the San Juan Islands.
-                </p>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <a href="#">
-                    Home
-                </a>
-
-                <a href="#">
-                    About Us
-                </a>
-
-                <a href="#">
-                    Contact Us
-                </a>
-
-                <a href="#">
-                    Check Reservation
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            &copy; 2026 Moffat Bay Marina |
-            CSD460-340A Group C
-
-        </div>
-
-
-    </div>
-
-</footer>
 
 </html>
 
