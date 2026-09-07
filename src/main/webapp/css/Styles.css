@@ -1,150 +1,198 @@
-/*-----MAIN SECTION-----*/
+/* =========================================================
+   MOFFAT BAY MARINA
+   SHARED SITE STYLES
+   ========================================================= */
 
 :root {
+
+    /* Christopher's shared color scheme */
     --Main-Background: #0D1B2A;
     --Secondary-Background: #F4F0E8;
-    --Tertiary-Background: rgb(53,62,74);
-
+    --Tertiary-Background: rgb(53, 62, 74);
     --Accent: #1A7073;
-    --Cards: #FDFBF5;
+    --cards: #FDFBF5;
     --Muted-Text: #acacac;
 
-     --Heading-Font: 'Inika', sans-serif;
-     --Main-Font: 'Mulish', sans-serif;
+    /* Shared fonts */
+    --Heading-Font: 'Inika', sans-serif;
+    --Main-Font: 'Mulish', sans-serif;
 
+    /* Common values */
     --Border-Radius: 10px;
     --Card-Shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
 }
+
+
+/* =========================================================
+   RESET / GLOBAL
+   ========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
-
-html {
+html,
+body {
     margin: 0;
     padding: 0;
 }
 
 body {
-   background-color: var(--Secondary-Background); 
-   color:#111;
-    font-family: var(--Main-Font);
-    margin:0;
     min-height: 100vh;
-    padding: 0;
-    
+
+    font-family: var(--Main-Font);
+
+    color: #111;
+
+    background-color: var(--Secondary-Background);
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--Heading-Font);
 }
 
 a {
-    color: inherit
+    color: inherit;
 }
 
-button,input {
+button,
+input {
     font: inherit;
 }
 
 
-/*-----------------------------------------------------
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
 
------HEADER SECTION-----*/
-
-.website-header {
-    background-color: var(--Main-Background);
+.site-header {
     width: 100%;
+
+    background-color: var(--Main-Background);
 }
 
 .navbar {
-    align-items: center;
-    border-bottom: 2px solid #05090d;
-    display: flex;
-    gap: 25px;
-    margin: 0 auto;
+    width: 86%;
     max-width: 1150px;
-    min-height: 60px;
-    width: 85%;
+    min-height: 62px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    border-bottom: 2px solid #05090d;
 }
 
-.header-logo {
-     color: white;
-     font-family: var(--Main-Font);
-     font-size: 25px;
-    font-weight: bold;
-    margin-left:  -100px;
-    margin-right:  auto;
+.brand {
+    margin-right: auto;
+
+    color: white;
+
     text-decoration: none;
+
+    font-family: var(--Main-Font);
+
+    font-size: 16px;
+
     white-space: nowrap;
 }
 
-.nav-page {
-    border-radius: 20px;
-    color: var(--Muted-Text);
-    padding: 8px 12px;
-    text-decoration: none;
-    transition: 
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
-
-.nav-page:hover, .nav-page:active {
-    background-color: var(--Accent);
-    color: white;
-}
-
-.nav-buttons, .nav-links {
-    align-items: center;
+.nav-links,
+.nav-actions {
     display: flex;
-    gap: 5px;
+
+    align-items: center;
+
+    gap: 6px;
 }
 
-.nav-feat {
-    background-color: var(--Accent);
-     border-radius: 20px;
-     color: var(--Muted-Text);
-    padding: 8px 14px;
+.nav-link {
+    padding: 8px 12px;
+
+    color: var(--Muted-Text);
+
     text-decoration: none;
+
+    border-radius: 20px;
+
     transition:
-    color 0.2 ease,
-    opacity 0.2 ease;
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
-.nav-feat:hover {
+.nav-link:hover,
+.nav-link.active {
     color: white;
+
+    background-color: var(--Accent);
+}
+
+.nav-pill {
+    padding: 8px 14px;
+
+    color: var(--Muted-Text);
+
+    background-color: var(--Accent);
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.nav-pill:hover {
+    color: white;
+
     opacity: 0.92;
 }
 
 
-/*-----------------------------------------------------
+/* =========================================================
+   COMMON PAGE HERO
+   ========================================================= */
 
------PAGE HERO SECTION-----*/
 .page-hero {
-     background-color: var(--Main-Background);
-    color: white;
     padding: 70px 20px 65px;
+
     text-align: center;
+
+    color: white;
+
+    background-color: var(--Main-Background);
 }
 
 .page-hero h1 {
-    font-size: 40px;
     margin: 0 0 12px;
+
+    font-size: 42px;
 }
 
 .page-hero p {
-    color: var(--Muted-Text);
-    font-size: 20px;
-    line-height: 1.6;
+    max-width: 700px;
+
     margin: 0 auto;
-     max-width: 700px;
+
+    color: var(--Muted-Text);
+
+    font-size: 18px;
+
+    line-height: 1.6;
 }
 
 
-/*-----------------------------------------------------
+/* =========================================================
+   COMMON PAGE CONTENT
+   ========================================================= */
 
------PAGE CONTENT SECTION-----*/
 .page-section {
     min-height: 550px;
 
@@ -161,84 +209,53 @@ button,input {
 }
 
 
-/*-----------------------------------------------------
-
------LOGIN SECTION-----*/
-
-.login-page {
-    align-items: center;
-    background-color: var(--Main-Background);
-    display: grid;
-    gap: 70px;
-    grid-template-columns: 0.85fr 1.15fr;
-    min-height: calc(100vh - 60px);
-    padding: 65px 5% 80px;
-}
-
-
-/*-----------------------------------------------------
-
------CARDS SECTION-----*/
+/* =========================================================
+   COMMON CARDS
+   ========================================================= */
 
 .content-card {
-    border-radius: var(--Border-Radius);
-    box-shadow: var(--Card-Shadow);
     padding: 35px;
+
+    background-color: var(--cards);
+
+    border-radius: var(--Border-Radius);
+
+    box-shadow: var(--Card-Shadow);
+}
+
+.content-card h2 {
+    margin-top: 0;
+
+    color: var(--Main-Background);
+
+    font-size: 27px;
 }
 
 .card-description {
-   color: #666;
-   line-height: 1.5;
     margin-top: -5px;
-    margin-bottom: 25px;
-    text-align: center;
-    white-space: nowrap;
+    margin-bottom: 28px;
+
+    color: #666;
+
+    line-height: 1.5;
 }
 
 
-.login-card {
- background-color: #FDFBF5;;
- border-radius: 12px;
- box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
- overflow: auto;
- transform: translate(850px,0px);
- width: 100%;
-
-}
-
-.login-card h1 {
-    color: var(--Main-Background);
-    font-size: 30px;
-    margin: 0 0 5px;
-}
-
-
-
-/*-----------------------------------------------------
-
------FORMS SECTION-----*/
-
-
-.login-form {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-}
-
-.login-form-wrapper {
-    width: 100%;
-
-    max-width: 680px;
-}
+/* =========================================================
+   COMMON FORMS
+   ========================================================= */
 
 .form-grid {
     display: grid;
-    gap: 25px;
-     grid-template-columns: 1fr 1fr;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
 }
 
 .form-group {
     display: flex;
+
     flex-direction: column;
 }
 
@@ -247,127 +264,712 @@ button,input {
 }
 
 .form-group label {
-    color: var(--Main-Background); 
-    font-weight: 700;
     margin-bottom: 7px;
+
+    color: var(--Main-Background);
+
+    font-weight: 700;
 }
 
 .form-group input {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    color: #111;
+    width: 100%;
+
     padding: 13px 14px;
+
+    color: #111;
+
+    background-color: white;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
-    width: 100%;
 }
 
 .form-group input:focus {
-    border-color: var(--Accent);
-    box-shadow: 0 0 0 3px rgba(26, 112, 115, 0.15);
     outline: none;
+
+    border-color: var(--Accent);
+
+    box-shadow: 0 0 0 3px rgba(26, 112, 115, 0.15);
+}
+
+.form-group small {
+    margin-top: 6px;
+
+    color: #707070;
+
+    font-size: 12px;
 }
 
 
+/* =========================================================
+   COMMON BUTTONS
+   ========================================================= */
 
-
-/*-----------------------------------------------------
-
------BUTTONS SECTION-----*/
-
-.sign-button {
-    background-color: var(--Accent);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+.primary-button,
+.secondary-button {
     display: inline-block;
-    font-size: 20px;
-    margin-top: 15px;
-    padding: 15px 50px;
+
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 7px;
+
     text-align: center;
+
     text-decoration: none;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
     transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
-    width: 25;
+        opacity 0.2s ease,
+        transform 0.2s ease;
 }
 
-.sign-button:hover {
+.primary-button {
+    color: white;
+
+    background-color: var(--Accent);
+}
+
+.secondary-button {
+    color: var(--Main-Background);
+
+    background-color: #e3e3e3;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
     opacity: 0.9;
+
     transform: translateY(-1px);
 }
 
+.button-row {
+    display: flex;
 
-/*-----------------------------------------------------
+    justify-content: center;
 
------SIGNUP SECTION-----*/
+    gap: 15px;
 
-.signup-link {
-    color: #666;
-    font-weight: 1000;
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   REGISTRATION PAGE
+   ========================================================= */
+
+.registration-page {
+    min-height: calc(100vh - 62px);
+
+    padding: 65px 7% 80px;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background-color: var(--Main-Background);
+}
+
+
+/* Registration information */
+
+.registration-intro {
+    max-width: 520px;
+
+    color: white;
+}
+
+.registration-eyebrow {
+    margin: 0 0 15px;
+
+    color: #3aa6aa;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.registration-intro h1 {
+    margin: 0 0 20px;
+
+    font-size: 46px;
+}
+
+.registration-intro > p {
+    color: var(--Muted-Text);
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+.registration-info {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background-color: var(--Tertiary-Background);
+
+    border-left: 5px solid var(--Accent);
+
+    border-radius: 8px;
+}
+
+.registration-info h2 {
+    margin-top: 0;
+
+    font-size: 21px;
+}
+
+.registration-info ul {
+    margin-bottom: 0;
+
+    padding-left: 22px;
+
+    color: #eee;
+
+    line-height: 1.9;
+}
+
+.slip-reminder {
     margin-top: 25px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.slip-reminder span {
+    padding: 7px 13px;
+
+    color: white;
+
+    background-color: var(--Accent);
+
+    border-radius: 20px;
+}
+
+
+/* Registration form card */
+
+.registration-form-wrapper {
+    width: 100%;
+
+    max-width: 680px;
+}
+
+.registration-card {
+    padding: 40px;
+
+    background-color: var(--cards);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+.registration-card h2 {
+    margin: 0 0 5px;
+
+    color: var(--Main-Background);
+
+    font-size: 30px;
+}
+
+.registration-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+.registration-submit-button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   REGISTRATION ERROR
+   ========================================================= */
+
+.registration-error {
+    width: 100%;
+
+    margin: 0 0 25px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    background-color: #f8e7e7;
+
+    border: 1px solid #e6bcbc;
+
+    border-left: 5px solid #a43b3b;
+
+    border-radius: 7px;
+}
+
+.registration-error-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    background-color: #a43b3b;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+.registration-error-content {
+    flex: 1;
+}
+
+.registration-error-title {
+    margin-bottom: 4px;
+
+    color: #812d2d;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+.registration-error-message {
+    color: #6d3535;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* Login link */
+
+.login-link {
+    margin-top: 25px;
+
+    color: #666;
+
     text-align: center;
-    transform: translateX(75px);
 }
 
-.signup-link a {
+.login-link a {
     color: var(--Accent);
-    font-weight: 1000;
+
+    font-weight: 700;
+
     text-decoration: none;
-   
 }
 
-.signup-link a:hover {
+.login-link a:hover {
     text-decoration: underline;
 }
 
 
-/*-----------------------------------------------------
+/* =========================================================
+   REGISTRATION SUCCESS PAGE
+   ========================================================= */
 
------FOOTER SECTION-----*/
+.confirmation-page {
+    min-height: calc(100vh - 62px);
 
-.website-footer {
+    padding: 80px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: var(--Main-Background);
+}
+
+.confirmation-card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 55px 55px 45px;
+
+    text-align: center;
+
+    background-color: var(--cards);
+
+    border-top: 6px solid var(--Accent);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+.confirmation-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    background-color: var(--Accent);
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    font-weight: 700;
+}
+
+.confirmation-eyebrow {
+    margin: 0 0 12px;
+
+    color: var(--Accent);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.confirmation-card h1 {
+    margin: 0 0 20px;
+
+    color: var(--Main-Background);
+
+    font-size: 38px;
+}
+
+.confirmation-message {
+    max-width: 500px;
+
+    margin: 0 auto 12px;
+
+    color: var(--Main-Background);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.confirmation-details {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+.confirmation-divider {
+    width: 70%;
+
+    height: 1px;
+
+    margin: 30px auto;
+
+    background-color: #ddd;
+}
+
+.confirmation-actions {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 5px;
+}
+
+.confirmation-login-button {
+    min-width: 200px;
+
+    padding: 13px 30px;
+
+    font-size: 16px;
+}
+
+.confirmation-note {
+    margin: 28px 0 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESERVATION LOOKUP
+   ========================================================= */
+
+.lookup-card {
+    max-width: 760px;
+
+    margin: 0 auto;
+}
+
+.lookup-divider {
+    position: relative;
+
+    margin: 22px 0;
+
+    text-align: center;
+
+    color: #777;
+}
+
+.lookup-divider::before,
+.lookup-divider::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 42%;
+
+    height: 1px;
+
+    background-color: #d2d2d2;
+}
+
+.lookup-divider::before {
+    left: 0;
+}
+
+.lookup-divider::after {
+    right: 0;
+}
+
+.reservation-result {
+    margin-top: 35px;
+
+    padding-top: 28px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+/* =========================================================
+   RESERVATION SUMMARY
+   ========================================================= */
+
+.summary-card {
+    max-width: 720px;
+
+    margin: 0 auto;
+}
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.summary-label {
+    color: #666;
+}
+
+.summary-value {
+    color: var(--Main-Background);
+
+    font-weight: 700;
+
+    text-align: right;
+}
+
+.price-box {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    text-align: center;
+
     background-color: var(--Tertiary-Background);
+
+    border-radius: 8px;
+}
+
+.price-box p {
+    margin: 0;
+
     color: var(--Muted-Text);
-    padding: 30px 0 30 px;
+}
+
+.monthly-price {
+    margin: 7px 0 0;
+
+    color: white;
+
+    font-family: var(--Heading-Font);
+
+    font-size: 40px;
+}
+
+
+/* =========================================================
+   WAIT LIST
+   ========================================================= */
+
+.waitlist-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.waitlist-card {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background-color: var(--cards);
+
+    border-top: 5px solid var(--Accent);
+
+    border-radius: var(--Border-Radius);
+
+    box-shadow: var(--Card-Shadow);
+}
+
+.waitlist-card h2 {
+    margin-top: 0;
+
+    color: var(--Main-Background);
+
+    font-size: 23px;
+}
+
+.wait-number {
+    margin: 10px 0;
+
+    color: var(--Accent);
+
+    font-family: var(--Heading-Font);
+
+    font-size: 52px;
+}
+
+.wait-label {
+    color: #666;
+}
+
+.privacy-message {
+    max-width: 720px;
+
+    margin: 35px auto 0;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #666;
+
+    background-color: var(--cards);
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    padding: 45px 0 30px;
+
+    color: var(--Muted-Text);
+
+    background-color: var(--Tertiary-Background);
 }
 
 .footer-content {
-    margin: 0 auto;
+    width: 86%;
     max-width: 1150px;
-    width: 85%;
+
+    margin: 0 auto;
 }
 
 .footer-main {
     display: flex;
-    gap: 50px;
+
     justify-content: space-between;
-     
+
+    gap: 50px;
 }
 
-.footer-logo h2 {
+.footer-brand h2 {
+    margin-top: 0;
+
     color: white;
-    font-size: 20px;
-    margin-top: 0;  
+
+    font-size: 22px;
 }
 
-.footer-logo p {
-   line-height: 1.6; 
-   max-width: 400px;   
+.footer-brand p {
+    max-width: 400px;
+
+    line-height: 1.6;
 }
 
 .footer-links {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 30px;
-    margin-top: 10px;
 }
 
 .footer-links a {
     color: var(--Muted-Text);
+
     text-decoration: none;
 }
 
@@ -376,35 +978,38 @@ button,input {
 }
 
 .footer-bottom {
-   border-top: 1px solid #5b626c; 
-    font-size: 15px;
-    margin-top: 50px;
+    margin-top: 35px;
+
     padding-top: 20px;
+
+    border-top: 1px solid #5b626c;
+
+    font-size: 14px;
 }
 
 
-/*-----------------------------------------------------
-
------TABLET SECTION-----*/
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
 
 @media screen and (max-width: 950px) {
 
-    .login-page {
+    .registration-page {
         grid-template-columns: 1fr;
 
         gap: 40px;
     }
 
-    .login-intro,
-    .login-form-wrapper {
+    .registration-intro,
+    .registration-form-wrapper {
         max-width: 720px;
     }
 }
 
 
-/*-----------------------------------------------------
-
------SMALL TABLET SECTION-----*/
+/* =========================================================
+   RESPONSIVE - SMALL TABLET
+   ========================================================= */
 
 @media screen and (max-width: 800px) {
 
@@ -414,7 +1019,7 @@ button,input {
         padding: 12px 0;
     }
 
-    .logo {
+    .brand {
         width: 100%;
 
         margin-bottom: 8px;
@@ -435,9 +1040,9 @@ button,input {
 }
 
 
-/*-----------------------------------------------------
-
------MOBILE SECTION-----*/
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
 
 @media screen and (max-width: 600px) {
 
@@ -450,20 +1055,22 @@ button,input {
     }
 
 
-    .login-page {
+    /* Registration */
+
+    .registration-page {
         padding: 45px 20px 60px;
     }
 
-    .login-intro h1 {
+    .registration-intro h1 {
         font-size: 36px;
     }
 
-    .login-card,
+    .registration-card,
     .content-card {
         padding: 25px 20px;
     }
 
-    .login-form,
+    .registration-form,
     .form-grid {
         grid-template-columns: 1fr;
     }
@@ -473,14 +1080,14 @@ button,input {
     }
 
 
-    /* login error */
+    /* Registration error */
 
-    .login-error {
+    .registration-error {
         padding: 13px 14px;
     }
 
 
-    /* login confirmation */
+    /* Registration confirmation */
 
     .confirmation-page {
         min-height: 600px;
@@ -539,7 +1146,8 @@ button,input {
         flex-direction: column;
     }
 
-    .sign-button {
+    .primary-button,
+    .secondary-button {
         width: 100%;
     }
 }
