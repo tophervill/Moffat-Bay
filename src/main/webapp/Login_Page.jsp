@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
     
  <!DOCTYPE html>
 <html lang="en">
@@ -24,8 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap"
     rel="stylesheet">
 
-    <link rel="stylesheet" 
-    href="${pageContext.request.contextPath}/css/Styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login_page.css">
     
 </head>
 
@@ -36,7 +35,7 @@
 
 <body>
 
- <%@ include file="includes/Header.jsp" %>
+ <%@ include file="includes/header.jsp" %>
      <main class="login-page">
           
         <section class="login-form-wrapper">
@@ -97,8 +96,13 @@
 	document.getElementById("username").value = "username@email.com";
     document.getElementById("password").value = "Password";
 	</script>
+	
+	<!-- 
+		This code area below must be revisited due to issues with redirecting. 
+		Page does NOT load due to JSP values -->
         
-    <%
+    
+<%-- 	<%
     String username = request.getParameter("username");
     String password = request.getParameter("password");
 
@@ -121,7 +125,7 @@
     else {
     	response.sendRedirect("login.jsp?error=InvalidPass");
     }
-	%>
+	%> --%>
 	
 	
 	<!----------------------------------------------------->
@@ -129,7 +133,7 @@
         <div class="signup-link">
 
         Don't have an account yet? <br> <br>
-        <a href="#">
+        <a href="register.jsp">
         Register your free account here.
         </a>
         </div>
@@ -141,7 +145,7 @@
     </section>
 </main>
 
- <%@ include file="includes/Footer.jsp" %>
+ <%@ include file="includes/footer.jsp" %>
 
 
 </body>
