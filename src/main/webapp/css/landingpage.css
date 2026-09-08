@@ -14,11 +14,10 @@
 
 body {
     margin: 0;
-    padding: 0;
 }
 
 h2 {
-    font-family: "Inika", sans-serif;
+    font-family: var(--Heading-Font);
     font-size: 2rem;
     font-weight: 300;
     background-color: var(--Tertiary-Background);
@@ -52,8 +51,8 @@ header:after{
 
 /* Navigation Bar */
 .navbar {
-    font-family: "Mulish", sans-serif;
-    font-weight: 100;
+    font-family: var(--Main-Font);
+    font-weight: 300;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,7 +144,6 @@ a.active:hover {
 .hero {
     background-color: var(--Main-Background);
     display: flex;
-    width: 100%;
     min-height: 650px;
 }
 .hero-left {
@@ -164,7 +162,7 @@ a.active:hover {
 }
 
 .hero-left h1 {
-    font-family: "Inika", sans-serif;
+    font-family: var(--Heading-Font);
     font-size: 3rem;
     font-weight: 100;
     color: var(--Accent);
@@ -172,7 +170,7 @@ a.active:hover {
 }
 
 #short-text {
-    font-family: "Mulish", sans-serif;
+    font-family: var(--Main-Font);
     font-weight: 100;
     color: var(--Muted-Text);
     margin: 10px 0 25px;
@@ -184,9 +182,6 @@ a.active:hover {
     background-size: 225% auto;
     background-position: center;
     background-repeat: no-repeat;
-    width: 50%;
-    height: auto;
-    /* Inner box shadow */
     box-shadow: inset 5px 15px 25px rgba(0, 0, 0, 0.5);
 }
 
@@ -207,15 +202,12 @@ a.active:hover {
 .check-availability-form .form-row {
     display: flex;
     gap: 25px;
-    width: 100%;
 }
 
 .check-availability-form .form-group {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 5px;
 }
 
@@ -242,11 +234,15 @@ a.active:hover {
     padding: 5px;
 }
 
+.pricing,
+.reviews {
+	background-color: var(--Secondary-Background);
+	min-height: 650px;
+}
+
 /* ===== Pricing Section Styles ===== */
 .pricing {
-    background-color: var(--Secondary-Background);
     text-align: center;
-    min-height: 650px;
 }
 
 .pricing-cards {
@@ -270,7 +266,6 @@ a.active:hover {
 
 .pricing-cards .card:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-cards .card ul {
@@ -285,10 +280,6 @@ a.active:hover {
 }
 
 /* ===== Reviews Section Styles ===== */
-.reviews {
-    background-color: var(--Secondary-Background);
-    min-height: 650px;
-}
 
 .review-card {
     background-color: var(--cards);
