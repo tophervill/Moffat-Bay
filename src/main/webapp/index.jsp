@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,22 +22,9 @@
 	<link rel="stylesheet" href="css/landingpage.css">
 </head>
 <body>
-<header>
-	<!--  Navigation Bar -->
-	<nav class="navbar">
-		<div class="nav-start">Moffat Bay Marina</div>
-		<div class="nav-middle mobile-hidden">
-			<a href="index.jsp" class="active">Home</a>
-			<a href="#">Attractions</a>
-			<a href="#">About Us</a>
-			<a href="#">Contact Us</a>
-		</div>
-		<div class="nav-end mobile-hidden">
-			<a href="#">Check Reservation</a>
-			<a href="Login_Page.jsp">Account</a>
-		</div>
-	</nav>
-</header>
+
+<%@ include file="includes/header.jsp" %>
+
 <main>
 	<!-- Hero Section -->
 	<div class="hero">
@@ -210,19 +197,26 @@
 </main>
 <footer>
 	<div class="footer-wrapper">
-		<div class="footer-text">
-			<h4>Moffat Bay Marina</h4>
-			<p>Serving the Marina of Joviedsa Island located in the State of Washington.</p>
+		<div class="column" id="footer-text">
+			<div class="footer-text">
+				<h4>Moffat Bay Marina</h4>
+				<p>Serving the Marina of Joviedsa Island located in the State of Washington.</p>
+			</div>
 		</div>
-		<div class="footer-nav">
-			<ul>
-				<li><a href="#">Attractions</a></li>
-				<li><a href="#">Reservations</a></li>
-				<li><a href="#">Wait List</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Contact Us</a></li>
-				<li><a href="#">Account</a></li>
-			</ul>
+		<div class="column" id="navigate">
+			<a href="#">Attractions</a>
+			<a href="#">Reservations</a>
+			<a href="#">Wait List</a>
+		</div>
+		<div class="column" id="info">
+			<a href="#">About Us</a>
+			<a href="#">Contact Us</a>
+			<a href="#">Account</a>
+		</div>
+		<div class="column" id="contact">
+			<a href="#">Email</a>
+			<a href="#">Phone</a>
+			<a href="#">Address</a>
 		</div>
 	</div>
 	<hr>
