@@ -45,7 +45,7 @@ header {
 header:after{
     display: block;
     content: "";
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
     border-bottom: 2px solid black;
 }
@@ -180,7 +180,7 @@ a.active:hover {
 
 .hero-right {
     flex: 1;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Images/landingPageOptOne.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/landingPageOptOne.jpg');
     background-size: 225% auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -330,42 +330,34 @@ footer > p { margin: 0; }
 
 .footer-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 40px;
     max-height: 150px;
     padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-text{
-    flex: 1;
-    text-align: left;
-    padding: 0 20px;
-}
-
-.footer-nav {
-    flex: 1;
+.footer-wrapper .column {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 0 20px;
+    flex: 1;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px 0;
 }
 
-.footer-nav li {
-    list-style: none;
-}
-
-.footer-nav li a {
+.footer-wrapper .column a {
     color: inherit;
     text-decoration: none;
+    margin: 5px 0;
     transition: 0.3s ease;
 }
 
-.footer-nav li a:hover {
-    color: var(--Accent);
+.footer-wrapper .column a:hover {
+    color: #F4F0E8;
 }
-
 /* =======================
     End of Landing Page Styles
    ======================= */
