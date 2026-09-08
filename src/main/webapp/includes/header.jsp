@@ -4,31 +4,30 @@
 
     <nav class="navbar">
 
-        <a class="brand"
-           href="${pageContext.request.contextPath}/index.jsp">
+        <a class="brand" href="${pageContext.request.contextPath}/index.jsp">
             Moffat Bay Marina
         </a>
 
 
         <div class="nav-links">
 
-            <a class="nav-link"
+            <a class="nav-link ${pageContext.request.servletPath == '/index.jsp' ? 'active' : ''}"
                href="${pageContext.request.contextPath}/index.jsp">
                 Home
             </a>
 
-            <a class="nav-link"
-               href="#">
+            <a class="nav-link ${pageContext.request.servletPath == '/attractions.jsp' ? 'active' : ''}"
+               href="${pageContext.request.contextPath}/attractions.jsp">
                 Attractions
             </a>
 
-            <a class="nav-link"
-               href="#">
+            <a class="nav-link ${pageContext.request.servletPath == '/about.jsp' ? 'active' : ''}"
+               href="${pageContext.request.contextPath}/about.jsp">
                 About Us
             </a>
 
-            <a class="nav-link"
-               href="#">
+            <a class="nav-link ${pageContext.request.servletPath == '/contact.jsp' ? 'active' : ''}"
+               href="${pageContext.request.contextPath}/contact.jsp">
                 Contact Us
             </a>
 
