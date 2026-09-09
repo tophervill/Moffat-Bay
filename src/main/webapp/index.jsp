@@ -29,115 +29,117 @@
 	<!-- Hero Section -->
 	<div class="hero">
 		<div class="hero-left">
-			<p id="welcoming-text">Welcome to</p>
-			<h1>Moffat Bay Marina</h1>
-			<p id="short-text">Whether you are staying for a weekend getaway or a full season, reserve your boat slip
-				online with ease and prepare for your next coastal adventure.</p>
-				
-			<jsp:useBean id="database" class="databaseBean.Database" scope="page" />
-				
-			<div class="check-availability-form">
-				<h4>Check Availability</h4>
-				<form action="index.jsp" method="POST">
-					<div class="form-row">
-						<div class="form-group">
-							<label for="arrivalDate">Arrival Date:</label>
-							<input type="date" id="arrivalDate" name="arrivalDate" required>
+			<div class="hero-left-wrapper">
+				<p id="welcoming-text">Welcome to</p>
+				<h1>Moffat Bay Marina</h1>
+				<p id="short-text">Whether you are staying for a weekend getaway or a full season, reserve your boat slip
+					online with ease and prepare for your next coastal adventure.</p>
+					
+				<jsp:useBean id="database" class="databaseBean.Database" scope="page" />
+					
+				<div class="check-availability-form">
+					<h4>Check Availability</h4>
+					<form action="index.jsp" method="POST">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="arrivalDate">Arrival Date:</label>
+								<input type="date" id="arrivalDate" name="arrivalDate" required>
+							</div>
+							<div class="form-group">
+								<label for="departureDate">Departure Date:</label>
+								<input type="date" id="departureDate" name="departureDate" required>
+							</div>
+							<div class="form-group">
+								<label for="vesselLength">Vessel Length:</label>
+								<input type="number" id="vesselLength" name="vesselLength" step="0.1" placeholder="Select ft." required>
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="departureDate">Departure Date:</label>
-							<input type="date" id="departureDate" name="departureDate" required>
+						<div class="form-row">
+							<input name="checkAvailability" type="submit" value="Search Available Slips">
 						</div>
-						<div class="form-group">
-							<label for="vesselLength">Vessel Length:</label>
-							<input type="number" id="vesselLength" name="vesselLength" step="0.1" placeholder="Select ft." required>
-						</div>
-					</div>
-					<div class="form-row">
-						<input name="checkAvailability" type="submit" value="Search Available Slips">
-					</div>
-				</form>
-
-				<%
-				if (request.getParameter("checkAvailability") != null) {
+					</form>
+	
+					<%
+					if (request.getParameter("checkAvailability") != null) {
+					
+					    String arrivalDate = request.getParameter("arrivalDate");
+					    String departureDate = request.getParameter("departureDate");
+					
+					    double vesselLength = Double.parseDouble(
+					        request.getParameter("vesselLength")
+					    );
+					
+					    // Check vessel size before querying database
+					    if (vesselLength <= 0 || vesselLength > 50) {
+					%>
+					
+				    <div class="availability-result">
 				
-				    String arrivalDate = request.getParameter("arrivalDate");
-				    String departureDate = request.getParameter("departureDate");
+				        <h4>No Slips Available</h4>
 				
-				    double vesselLength = Double.parseDouble(
-				        request.getParameter("vesselLength")
-				    );
+				        <p>
+				            Moffat Bay Marina can only accommodate vessels
+				            up to 50 feet in length. Please enter a different vessel length.
+				        </p>
 				
-				    // Check vessel size before querying database
-				    if (vesselLength <= 0 || vesselLength > 50) {
-				%>
+				    </div>
+					
+					<%
+					    } else {
+					
+					        boolean available = database.checkAvailability(arrivalDate, departureDate, vesselLength);
+					
+					        System.out.println("Availability returned to JSP: " + available);
+					
+					        if (available) {
+					%>
+					
+				    <div class="availability-result">
 				
-			    <div class="availability-result">
-			
-			        <h4>No Slips Available</h4>
-			
-			        <p>
-			            Moffat Bay Marina can only accommodate vessels
-			            up to 50 feet in length. Please enter a different vessel length.
-			        </p>
-			
-			    </div>
+				        <h4>Available Slips Found</h4>
 				
-				<%
-				    } else {
+				        <p>
+				            Looks like we have availability for your selected dates.
+				            Please continue to the reservation page to finish your booking.
+				        </p>
 				
-				        boolean available = database.checkAvailability(arrivalDate, departureDate, vesselLength);
+				        <form action="reservation.jsp" method="POST">
 				
-				        System.out.println("Availability returned to JSP: " + available);
+				            <input type="hidden" name="arrivalDate"value="<%= arrivalDate %>">
 				
-				        if (available) {
-				%>
+				            <input type="hidden" name="departureDate" value="<%= departureDate %>">
 				
-			    <div class="availability-result">
-			
-			        <h4>Available Slips Found</h4>
-			
-			        <p>
-			            Looks like we have availability for your selected dates.
-			            Please continue to the reservation page to finish your booking.
-			        </p>
-			
-			        <form action="reservation.jsp" method="POST">
-			
-			            <input type="hidden" name="arrivalDate"value="<%= arrivalDate %>">
-			
-			            <input type="hidden" name="departureDate" value="<%= departureDate %>">
-			
-			            <input type="hidden" name="vesselLength" value="<%= vesselLength %>">
-			
-			            <input type="submit" value="Continue to Reservation">
-			
-			        </form>
-			
-			    </div>
+				            <input type="hidden" name="vesselLength" value="<%= vesselLength %>">
 				
-				<%
-				        } else {
-				%>
+				            <input type="submit" value="Continue to Reservation">
 				
-			    <div class="availability-result">
-			
-			        <h4>No Slips Available</h4>
-			
-			        <p>
-			            No slips are currently available for the selected dates
-			            and vessel length. Please try different dates.
-			        </p>
-			
-			    </div>
+				        </form>
 				
-				<%
-				        }
+				    </div>
+					
+					<%
+					        } else {
+					%>
+					
+				    <div class="availability-result">
 				
-				        database.closeConnection();
-				    }
-				}
-				%>
+				        <h4>No Slips Available</h4>
+				
+				        <p>
+				            No slips are currently available for the selected dates
+				            and vessel length. Please try different dates.
+				        </p>
+				
+				    </div>
+					
+					<%
+					        }
+					
+					        database.closeConnection();
+					    }
+					}
+					%>
+				</div>
 			</div>
 		</div>
 		<div class="hero-right"></div>
@@ -179,19 +181,35 @@
 
 	<div class="reviews">
 		<h2>See What Our Customers Say</h2>
-		<div class="review-card">
-			<div class="review-rating">
-				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
-				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
-				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
-				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
-				<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+		<div class="review-row">
+			<div class="review-card">
+				<div class="review-rating">
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+				</div>
+				<blockquote class="review-message">
+					"Moffat Bay Marina is simply the finest marina I've docked at along the coast. The staff anticipated every need before I could ask."
+				</blockquote>
+				<p class="review-author">- James Corleone</p>
+				<p class="review-date">August 23, 2026</p>
 			</div>
-			<blockquote class="review-message">
-				"Moffat Bay Marina is simply the finest marina I've docked at along the coast. The staff anticipated every need before I could ask."
-			</blockquote>
-			<p class="review-author">- James Corleone</p>
-			<p class="review-date">August 23, 2026</p>
+			<div class="review-card">
+				<div class="review-rating">
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+				</div>
+				<blockquote class="review-message">
+					"Moffat Bay Marina is simply the finest marina I've docked at along the coast. The staff anticipated every need before I could ask."
+				</blockquote>
+				<p class="review-author">- James Corleone</p>
+				<p class="review-date">August 23, 2026</p>
+			</div>
 		</div>
 	</div>
 </main>
