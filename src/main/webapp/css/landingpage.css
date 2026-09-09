@@ -155,6 +155,11 @@ a.active:hover {
     padding: 35px 125px;
 }
 
+.hero-left-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 /* === Hero Left Section === */
 #welcoming-text {
     font-size: 1.2rem;
@@ -281,12 +286,23 @@ a.active:hover {
 
 /* ===== Reviews Section Styles ===== */
 
+.reviews {
+    padding: 100px 0;
+}
+
+.review-row {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 20px;
+}
+
 .review-card {
     background-color: var(--cards);
     border-radius: 5px;
     padding: 20px;
     width: 750px;
-    margin: 50px auto 0;
+    margin: 100px auto 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 65%;
     transition: 0.3s ease;
@@ -314,6 +330,7 @@ footer {
 }
 
 footer > p { margin: 0; }
+
 #team {
     color: var(--Accent);
     font-size: small;
