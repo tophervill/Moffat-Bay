@@ -205,10 +205,10 @@
 					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
 				</div>
 				<blockquote class="review-message">
-					"Moffat Bay Marina is simply the finest marina I've docked at along the coast. The staff anticipated every need before I could ask."
+					"Great marina with excellent amenities. The online reservation system made it easy to secure a slip for my boat."
 				</blockquote>
-				<p class="review-author">- James Corleone</p>
-				<p class="review-date">August 23, 2026</p>
+				<p class="review-author">- Sarah Johnson</p>
+				<p class="review-date">September 7, 2026</p>
 			</div>
 		</div>
 	</div>
