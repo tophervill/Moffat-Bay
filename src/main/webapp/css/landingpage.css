@@ -287,7 +287,7 @@ a.active:hover {
 /* ===== Reviews Section Styles ===== */
 
 .reviews {
-    padding: 100px 0;
+    padding: 100px 0 50px;
 }
 
 .review-row {
@@ -302,10 +302,13 @@ a.active:hover {
     border-radius: 5px;
     padding: 20px;
     width: 750px;
-    margin: 100px auto 0;
+    margin: 125px auto 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 65%;
     transition: 0.3s ease;
+}
+
+.review-card:hover {
+	transform: scale(1.02);
 }
 
 .review-author {
@@ -319,6 +322,7 @@ a.active:hover {
     color: black;
     font-size: 28px;
     margin-top: 15px;
+    min-height: 150px;
 }
 
 /* ===== Footer Styles ====== */

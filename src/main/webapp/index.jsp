@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- 
+	CSD460 - Group C
+	Moffat Bay Marina Project
+	-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Moffat Bay Marina</title>
@@ -232,13 +236,13 @@
 			<a href="#">Account</a>
 		</div>
 		<div class="column" id="contact">
-			<a href="#">Email</a>
-			<a href="#">Phone</a>
-			<a href="#">Address</a>
+			<a href="mailto:MoffatBayMarina@email.com">MoffatBayMarina@email.com</a>
+			<a href="tel:15555555555" >+1 (555) 555 - 5555</a>
+			<a href="https://wa.gov/" target="_blank">Joviesda Island, Washington</a>
 		</div>
 	</div>
 	<hr>
-	<p>&copy; 2026 - Moffat Bay Marina <br/><span id="team">Created By: Group C - CSD460</span></p>
+	<p>&copy; 2026 - Moffat Bay Marina></p>
 </footer>
 </body>
 </html>
