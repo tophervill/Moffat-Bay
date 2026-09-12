@@ -41,10 +41,35 @@
                 Check Reservation
             </a>
 
-            <a class="nav-pill"
-               href="${pageContext.request.contextPath}/register.jsp">
-                Account
-            </a>
+
+            <%
+                String loggedInCustomerName =
+                        (String) session.getAttribute("customerName");
+
+                if (loggedInCustomerName != null) {
+            %>
+
+                <span class="nav-pill">
+                    Welcome, <%= loggedInCustomerName %>
+                </span>
+
+                <a class="nav-pill"
+                   href="${pageContext.request.contextPath}/logout">
+                    Logout
+                </a>
+
+            <%
+                } else {
+            %>
+
+                <a class="nav-pill"
+                   href="${pageContext.request.contextPath}/Login_Page.jsp">
+                    Log In
+                </a>
+
+            <%
+                }
+            %>
 
         </div>
 

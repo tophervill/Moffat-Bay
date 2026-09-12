@@ -1,0 +1,271 @@
+:root {
+    --Main-Background: #0D1B2A;
+    --Secondary-Background: #F4F0E8;
+    --Tertiary-Background: rgb(53, 62, 74);
+    --Accent: #1A7073;
+    --cards: #FDFBF5;
+    --Muted-Text: #acacac;
+
+    --Heading-Font: 'Inika', sans-serif;
+    --Main-Font: 'Mulish', sans-serif;
+}
+
+
+/* =========================
+   Wait List Confirmation Page
+   ========================= */
+
+.waitlist-confirmation-page {
+    min-height: calc(100vh - 140px);
+    padding: 90px 20px;
+    background-color: var(--Main-Background);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* =========================
+   Main Card
+   ========================= */
+
+.waitlist-confirmation-card {
+    width: 100%;
+    max-width: 850px;
+    padding: 45px;
+    border-radius: 12px;
+    background-color: var(--cards);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================
+   Heading
+   ========================= */
+
+.waitlist-confirmation-heading {
+    margin-bottom: 30px;
+}
+
+.waitlist-confirmation-eyebrow {
+    margin: 0 0 8px;
+    font-family: var(--Main-Font);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--Accent);
+}
+
+.waitlist-confirmation-heading h1 {
+    margin: 0 0 12px;
+    font-family: var(--Heading-Font);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--Main-Background);
+}
+
+.waitlist-confirmation-description {
+    margin: 0;
+    font-family: var(--Main-Font);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--Tertiary-Background);
+}
+
+
+/* =========================
+   Wait List Number
+   ========================= */
+
+.waitlist-number {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid var(--Accent);
+    border-radius: 8px;
+    background-color: #E3F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.waitlist-number-label {
+    font-family: var(--Main-Font);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Accent);
+}
+
+.waitlist-number-value {
+    font-family: var(--Heading-Font);
+    font-size: 28px;
+    color: var(--Accent);
+}
+
+
+/* =========================
+   Information Sections
+   ========================= */
+
+.waitlist-confirmation-section {
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: var(--Secondary-Background);
+}
+
+.waitlist-confirmation-section h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    background: none;
+    text-align: left;
+    font-family: var(--Heading-Font);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--Main-Background);
+}
+
+.waitlist-confirmation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.waitlist-confirmation-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.waitlist-confirmation-label {
+    font-family: var(--Main-Font);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--Accent);
+}
+
+.waitlist-confirmation-value {
+    font-family: var(--Main-Font);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Main-Background);
+}
+
+
+/* =========================
+   Confirmation Message
+   ========================= */
+
+.waitlist-message {
+    margin-top: 25px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--Accent);
+    background-color: #E3F0F0;
+    font-family: var(--Main-Font);
+    color: var(--Tertiary-Background);
+}
+
+.waitlist-message strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--Accent);
+}
+
+.waitlist-message p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Actions
+   ========================= */
+
+.waitlist-confirmation-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.waitlist-confirmation-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--Accent);
+    color: #ffffff;
+    font-family: var(--Main-Font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.waitlist-confirmation-button:hover {
+    background-color: #14595c;
+}
+
+
+/* =========================
+   Error
+   ========================= */
+
+.waitlist-confirmation-error {
+    padding: 20px;
+    border: 1px solid #b95b5b;
+    border-radius: 8px;
+    background-color: #fff1f1;
+    font-family: var(--Main-Font);
+    color: #7d2525;
+}
+
+.waitlist-confirmation-error strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.waitlist-confirmation-error p {
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .waitlist-confirmation-page {
+        padding: 50px 15px;
+    }
+
+    .waitlist-confirmation-card {
+        padding: 30px 20px;
+    }
+
+    .waitlist-confirmation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .waitlist-number {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .waitlist-confirmation-actions {
+        flex-direction: column;
+    }
+
+    .waitlist-confirmation-button {
+        width: 100%;
+    }
+
+}
