@@ -37,56 +37,72 @@
 
  <%@ include file="includes/header.jsp" %>
      <main class="login-page">
-          
-        <section class="login-form-wrapper">
-
-            <div class="login-card"> 
-                <h1>Account Log In</h1>
-
-        <form action="Login_Page.php" method="POST" class="login-form">
-       
-                <p class="card-description">
+     <section class="login-form-wrapper">
+     	<div class="login-form">
+				<div class="login-card"> 
+                	<h1>Account Log In</h1>
+					<form action="Login_Page.php" method="POST" class="login-form"> 	
+       				<p class="login-description">
                     Enter your email and password below to access your account
-                </p>
-        <div class="form-group full-width">
+                	</p>
+        			
+        			<div class="form-group full-width">
 
-        <label for="username">
-            <h3>Username</h3>
-        </label>
+			        <label for="username">
+			            <h3>Username</h3>
+			        </label>
 
-        <input
-            type="email"
-            id="email"
-            name="email"
-            maxlength="255"
-            placeholder="username@email.com"
-            required>
-        </div>
+			        <input
+			            type="email"
+			            id="email"
+			            name="email"
+			            maxlength="255"
+			            placeholder="username@email.com"
+			            required>
+        			</div>
 
-        <div class="form-group full-width">
+        			<div class="form-group full-width">
 
-        <label for="password">
-            <h3>Password</h3>
-        </label>
+			        <label for="password">
+			            <h3>Password</h3>
+			        </label>
+			
+			        <input
+			            type="password"
+			            id="password"
+			            name="password"
+			            minlength="8"
+			            maxlength="100"
+			            title="Password must be at least 8 characters and contain at least 
+			            one uppercase and one lowercase letter."
+			            placeholder="Password" 
+			            required>
+			        </div>
 
-        <input
-            type="password"
-            id="password"
-            name="password"
-            minlength="8"
-            maxlength="100"
-            title="Password must be at least 8 characters and contain at least 
-            one uppercase and one lowercase letter."
-            placeholder="Password" 
-            required>
-        </div>
+			        <div class="full-width">
+			            <button type="submit"
+			                class="sign-button login-submit-button">
+			                Sign In
+			            </button>
+			        </div>
+			        
+			        <div class="signup-link">
 
-        <div class="full-width">
-            <button type="submit"
-                class="sign-button login-submit-button">
-                Sign In
-            </button>
-        </div>
+	        		Don't have an account yet? <br> <br>
+	        		<a href="register.jsp">
+	        		Register your free account here.
+	        		</a>
+        		</div>
+			        
+			      </form>
+        
+       			</div>
+       		</div>
+       	</section>
+       
+       		
+       
+     
         
 <!-----------------------------------------------------
 
@@ -128,21 +144,7 @@
 	%> --%>
 	
 	
-	<!----------------------------------------------------->
 
-        <div class="signup-link">
-
-        Don't have an account yet? <br> <br>
-        <a href="register.jsp">
-        Register your free account here.
-        </a>
-        </div>
-
-    </form>
-
-    </div>
-
-    </section>
 </main>
 
  <%@ include file="includes/footer.jsp" %>
