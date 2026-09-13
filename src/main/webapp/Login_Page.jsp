@@ -33,18 +33,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap"
           rel="stylesheet">
 
+    <!-- Shared site styles for consistent header/footer -->
+
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/styles.css">
+
+    <!-- Login page-specific styles -->
+
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/css/login_page.css">
 
 </head>
 
 
-<!-----------------------------------------------------
------LOGIN FORM----->
+<!-- LOGIN FORM -->
 
 <body>
 
 <%@ include file="includes/header.jsp" %>
+
 
 <main class="login-page">
 
@@ -52,38 +59,50 @@
 
         <div class="login-card">
 
-            <h1>Account Log In</h1>
+            <h1>
+                Account Log In
+            </h1>
 
             <form action="${pageContext.request.contextPath}/login"
                   method="POST"
                   class="login-form">
 
                 <p class="card-description">
+
                     Enter your email and password below to access your account
+
                 </p>
 
 
                 <%-- Login error returned by LoginServlet --%>
 
                 <%
+
                     String loginError =
                             (String) request.getAttribute("loginError");
 
                     if (loginError != null) {
+
                 %>
 
                 <div class="login-error">
 
-                    <strong>Login Failed</strong>
+                    <strong>
+                        Login Failed
+                    </strong>
 
                     <p>
+
                         <%= loginError %>
+
                     </p>
 
                 </div>
 
                 <%
+
                     }
+
                 %>
 
 
@@ -91,7 +110,9 @@
 
                     <label for="email">
 
-                        <h3>Username</h3>
+                        <h3>
+                            Username
+                        </h3>
 
                     </label>
 
@@ -110,7 +131,9 @@
 
                     <label for="password">
 
-                        <h3>Password</h3>
+                        <h3>
+                            Password
+                        </h3>
 
                     </label>
 
@@ -144,7 +167,9 @@
                     Don't have an account yet? <br><br>
 
                     <a href="register.jsp">
+
                         Register your free account here.
+
                     </a>
 
                 </div>
@@ -157,7 +182,9 @@
 
 </main>
 
+
 <%@ include file="includes/footer.jsp" %>
+
 
 </body>
 

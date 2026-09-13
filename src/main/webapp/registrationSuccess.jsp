@@ -40,6 +40,12 @@
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/css/styles.css">
 
+
+    <!-- Registration Success Page Styles -->
+
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/registration_success.css">
+
 </head>
 
 
@@ -56,17 +62,23 @@
 
 
             <div class="confirmation-icon">
+
                 ✓
+
             </div>
 
 
             <p class="confirmation-eyebrow">
+
                 ACCOUNT CREATED
+
             </p>
 
 
             <h1>
+
                 Registration Successful!
+
             </h1>
 
 

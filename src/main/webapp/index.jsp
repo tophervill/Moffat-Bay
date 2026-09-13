@@ -6,41 +6,53 @@
 
 <head>
 
-	<!-- 
-	CSD460 - Group C
-	Moffat Bay Marina Project
-	-->
+    <!--
+    CSD460 - Group C
+    Moffat Bay Marina Project
+    -->
 
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-	<title>Moffat Bay Marina</title>
+    <title>Moffat Bay Marina</title>
 
-	<!--  Meta Tags -->
+    <!-- Meta Tags -->
 
-	<meta name="description"
-		  content="Moffat Bay Marina - Your gateway to coastal adventures. Reserve your boat slip online and explore the beauty of Joviedsa Island.">
+    <meta name="description"
+          content="Moffat Bay Marina - Your gateway to coastal adventures. Reserve your boat slip online and explore the beauty of Joviedsa Island.">
 
-	<meta name="author" content="CSD460-340A | Group C">
+    <meta name="author"
+          content="CSD460-340A | Group C">
 
-	<meta name="keywords"
-		  content="Moffat Bay Marina, Boat Slip Reservation, Joviedsa Island, Coastal Adventures, Marina Services">
+    <meta name="keywords"
+          content="Moffat Bay Marina, Boat Slip Reservation, Joviedsa Island, Coastal Adventures, Marina Services">
 
-	<!--  Fonts -->
+    <!-- Fonts -->
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-	<link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-		  rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
 
-	<script src="https://kit.fontawesome.com/d9a1097e3c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d9a1097e3c.js"
+            crossorigin="anonymous"></script>
 
-	<!--  Stylesheets -->
+    <!-- Shared Site Styles -->
 
-	<link rel="stylesheet" href="css/landingpage.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/styles.css">
+
+    <!-- Landing Page Styles -->
+
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/landingpage.css">
 
 </head>
 
@@ -50,307 +62,306 @@
 
 <main>
 
-	<!-- Hero Section -->
+    <!-- Hero Section -->
 
-	<div class="hero">
+    <div class="hero">
 
-		<div class="hero-left">
+        <div class="hero-left">
 
-			<div class="hero-left-wrapper">
+            <div class="hero-left-wrapper">
 
-				<p id="welcoming-text">Welcome to</p>
+                <p id="welcoming-text">
+                    Welcome to
+                </p>
 
-				<h1>Moffat Bay Marina</h1>
+                <h1>
+                    Moffat Bay Marina
+                </h1>
 
-				<p id="short-text">
-					Whether you are staying for a weekend getaway or a full season,
-					reserve your boat slip online with ease and prepare for your next
-					coastal adventure.
-				</p>
+                <p id="short-text">
 
-				<div class="check-availability-form">
+                    Whether you are staying for a weekend getaway or a full season,
+                    reserve your boat slip online with ease and prepare for your next
+                    coastal adventure.
 
-					<form action="${pageContext.request.contextPath}/reservation"
-						  method="GET">
+                </p>
 
-						<div class="form-row">
+                <div class="check-availability-form">
 
-							<input
-								type="submit"
-								value="Login to Reserve an Available Slip">
+                    <form action="${pageContext.request.contextPath}/reservation"
+                          method="GET">
 
-						</div>
+                        <div class="form-row">
 
-					</form>
+                            <input
+                                type="submit"
+                                value="Login to Reserve an Available Slip">
 
-				</div>
+                        </div>
 
-			</div>
+                    </form>
 
-		</div>
+                </div>
 
-		<div class="hero-right"></div>
+            </div>
 
-	</div>
+        </div>
 
+        <div class="hero-right"></div>
 
-	<!-- Pricing Section -->
+    </div>
 
-	<div class="pricing">
 
-		<h2>Check Out Our Pricing</h2>
 
-		<div class="pricing-cards">
+    <!-- Pricing Section -->
 
-			<div class="card">
+    <div class="pricing">
 
-				<h3>Small Slip</h3>
+        <h2>
+            Check Out Our Pricing
+        </h2>
 
-				<p class="size-text">
-					Boats up to 26 ft.
-				</p>
+        <div class="pricing-cards">
 
-				<ul class="card-list-desc">
+            <div class="card">
 
-					<li>
-						$10.50 per boat foot
-					</li>
+                <h3>
+                    Small Slip
+                </h3>
 
-					<li>
-						$10 service fee (Electrical)
-					</li>
+                <p class="size-text">
 
-					<li>
-						Estimated Costs:
-						<span>
-							Up to $283.00 at 26 Feet
-						</span>
-					</li>
+                    Boats up to 26 ft.
 
-				</ul>
+                </p>
 
-			</div>
+                <ul class="card-list-desc">
 
+                    <li>
 
-			<div class="card">
+                        $10.50 per boat foot
 
-				<h3>Medium Slip</h3>
+                    </li>
 
-				<p class="size-text">
-					Boats over 26 ft. and up to 40 ft.
-				</p>
+                    <li>
 
-				<ul class="card-list-desc">
+                        $10 service fee (Electrical)
 
-					<li>
-						$10.50 per boat foot
-					</li>
+                    </li>
 
-					<li>
-						$10 service fee (Electrical)
-					</li>
+                    <li>
 
-					<li>
-						Estimated Costs:
-						<span>
-							Up to $430.00 at 40 Feet
-						</span>
-					</li>
+                        Estimated Costs:
 
-				</ul>
+                        <span>
 
-			</div>
+                            Up to $283.00 at 26 Feet
 
+                        </span>
 
-			<div class="card">
+                    </li>
 
-				<h3>Large Slip</h3>
+                </ul>
 
-				<p class="size-text">
-					Boats over 40 ft. and up to 50 ft.
-				</p>
+            </div>
 
-				<ul class="card-list-desc">
 
-					<li>
-						$10.50 per boat foot
-					</li>
 
-					<li>
-						$10 service fee (Electrical)
-					</li>
+            <div class="card">
 
-					<li>
-						Estimated Costs:
-						<span>
-							Up to $535.00 at 50 Feet
-						</span>
-					</li>
+                <h3>
+                    Medium Slip
+                </h3>
 
-				</ul>
+                <p class="size-text">
 
-			</div>
+                    Boats over 26 ft. and up to 40 ft.
 
-		</div>
+                </p>
 
-	</div>
+                <ul class="card-list-desc">
 
+                    <li>
 
-	<div class="reviews">
+                        $10.50 per boat foot
 
-		<h2>See What Our Customers Say</h2>
+                    </li>
 
-		<div class="review-row">
+                    <li>
 
-			<div class="review-card">
+                        $10 service fee (Electrical)
 
-				<div class="review-rating">
+                    </li>
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                    <li>
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                        Estimated Costs:
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                        <span>
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                            Up to $430.00 at 40 Feet
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                        </span>
 
-				</div>
+                    </li>
 
-				<blockquote class="review-message">
+                </ul>
 
-					"Moffat Bay Marina is simply the finest marina I've docked at along the coast. The staff anticipated every need before I could ask."
+            </div>
 
-				</blockquote>
 
-				<p class="review-author">
-					- James Corleone
-				</p>
 
-				<p class="review-date">
-					August 23, 2026
-				</p>
+            <div class="card">
 
-			</div>
+                <h3>
+                    Large Slip
+                </h3>
 
+                <p class="size-text">
 
-			<div class="review-card">
+                    Boats over 40 ft. and up to 50 ft.
 
-				<div class="review-rating">
+                </p>
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                <ul class="card-list-desc">
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                    <li>
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                        $10.50 per boat foot
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                    </li>
 
-					<i class="fa-solid fa-star fa-lg" style="color: #1A7073;"></i>
+                    <li>
 
-				</div>
+                        $10 service fee (Electrical)
 
-				<blockquote class="review-message">
+                    </li>
 
-					"Great marina with excellent amenities. The online reservation system made it easy to secure a slip for my boat."
+                    <li>
 
-				</blockquote>
+                        Estimated Costs:
 
-				<p class="review-author">
-					- Sarah Johnson
-				</p>
+                        <span>
 
-				<p class="review-date">
-					September 7, 2026
-				</p>
+                            Up to $535.00 at 50 Feet
 
-			</div>
+                        </span>
 
-		</div>
+                    </li>
 
-	</div>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Reviews Section -->
+
+    <div class="reviews">
+
+        <h2>
+            See What Our Customers Say
+        </h2>
+
+        <div class="review-row">
+
+            <div class="review-card">
+
+                <div class="review-rating">
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                </div>
+
+                <blockquote class="review-message">
+
+                    "Moffat Bay Marina is simply the finest marina I've docked at along the coast. The staff anticipated every need before I could ask."
+
+                </blockquote>
+
+                <p class="review-author">
+
+                    - James Corleone
+
+                </p>
+
+                <p class="review-date">
+
+                    August 23, 2026
+
+                </p>
+
+            </div>
+
+
+
+            <div class="review-card">
+
+                <div class="review-rating">
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                    <i class="fa-solid fa-star fa-lg"
+                       style="color: #1A7073;"></i>
+
+                </div>
+
+                <blockquote class="review-message">
+
+                    "Great marina with excellent amenities. The online reservation system made it easy to secure a slip for my boat."
+
+                </blockquote>
+
+                <p class="review-author">
+
+                    - Sarah Johnson
+
+                </p>
+
+                <p class="review-date">
+
+                    September 7, 2026
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </main>
 
 
-<footer>
+<%@ include file="includes/footer.jsp" %>
 
-	<div class="footer-wrapper">
-
-		<div class="column" id="footer-text">
-
-			<div class="footer-text">
-
-				<h4>Moffat Bay Marina</h4>
-
-				<p>
-					Serving the Marina of Joviedsa Island located
-					in the State of Washington.
-				</p>
-
-			</div>
-
-		</div>
-
-
-		<div class="column" id="navigate">
-
-			<a href="#">
-				Attractions
-			</a>
-
-			<a href="#">
-				Reservations
-			</a>
-
-			<a href="#">
-				Wait List
-			</a>
-
-		</div>
-
-
-		<div class="column" id="info">
-
-			<a href="#">
-				About Us
-			</a>
-
-			<a href="#">
-				Contact Us
-			</a>
-
-			<a href="#">
-				Account
-			</a>
-
-		</div>
-
-
-		<div class="column" id="contact">
-
-			<a href="mailto:MoffatBayMarina@email.com">
-				MoffatBayMarina@email.com
-			</a>
-
-			<a href="tel:15555555555">
-				+1 (555) 555 - 5555
-			</a>
-
-			<a href="https://wa.gov/" target="_blank">
-				Joviesda Island, Washington
-			</a>
-
-		</div>
-
-	</div>
-
-	<hr>
-
-	<p>&copy; 2026 - Moffat Bay Marina></p>
-
-</footer>
 
 </body>
 

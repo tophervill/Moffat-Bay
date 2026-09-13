@@ -1,0 +1,358 @@
+/* =========================================================
+   MOFFAT BAY MARINA
+   REGISTRATION PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   REGISTRATION PAGE
+   ========================================================= */
+
+.registration-page {
+
+    min-height: calc(100vh - 62px);
+
+    padding: 65px 7% 80px;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background-color: var(--Main-Background);
+
+}
+
+
+/* =========================================================
+   REGISTRATION INFORMATION
+   ========================================================= */
+
+.registration-intro {
+
+    max-width: 520px;
+
+    color: white;
+
+}
+
+.registration-eyebrow {
+
+    margin: 0 0 15px;
+
+    color: #3aa6aa;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.registration-intro h1 {
+
+    margin: 0 0 20px;
+
+    font-size: 46px;
+
+}
+
+.registration-intro > p {
+
+    color: var(--Muted-Text);
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+.registration-info {
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background-color: var(--Tertiary-Background);
+
+    border-left: 5px solid var(--Accent);
+
+    border-radius: 8px;
+
+}
+
+.registration-info h2 {
+
+    margin-top: 0;
+
+    font-size: 21px;
+
+}
+
+.registration-info ul {
+
+    margin-bottom: 0;
+
+    padding-left: 22px;
+
+    color: #eee;
+
+    line-height: 1.9;
+
+}
+
+.slip-reminder {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.slip-reminder span {
+
+    padding: 7px 13px;
+
+    color: white;
+
+    background-color: var(--Accent);
+
+    border-radius: 20px;
+
+}
+
+
+/* =========================================================
+   REGISTRATION FORM
+   ========================================================= */
+
+.registration-form-wrapper {
+
+    width: 100%;
+
+    max-width: 680px;
+
+}
+
+.registration-card {
+
+    padding: 40px;
+
+    background-color: var(--cards);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+
+}
+
+.registration-card h2 {
+
+    margin: 0 0 5px;
+
+    color: var(--Main-Background);
+
+    font-size: 30px;
+
+}
+
+.registration-form {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+}
+
+.registration-submit-button {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   REGISTRATION ERROR
+   ========================================================= */
+
+.registration-error {
+
+    width: 100%;
+
+    margin: 0 0 25px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    background-color: #f8e7e7;
+
+    border: 1px solid #e6bcbc;
+
+    border-left: 5px solid #a43b3b;
+
+    border-radius: 7px;
+
+}
+
+.registration-error-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background-color: #a43b3b;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+}
+
+.registration-error-content {
+
+    flex: 1;
+
+}
+
+.registration-error-title {
+
+    margin-bottom: 4px;
+
+    color: #812d2d;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+
+.registration-error-message {
+
+    color: #6d3535;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   LOGIN LINK
+   ========================================================= */
+
+.login-link {
+
+    margin-top: 25px;
+
+    color: #666;
+
+    text-align: center;
+
+}
+
+.login-link a {
+
+    color: var(--Accent);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+.login-link a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media screen and (max-width: 950px) {
+
+    .registration-page {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+    .registration-intro,
+    .registration-form-wrapper {
+
+        max-width: 720px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .registration-page {
+
+        padding: 45px 20px 60px;
+
+    }
+
+    .registration-intro h1 {
+
+        font-size: 36px;
+
+    }
+
+    .registration-card {
+
+        padding: 25px 20px;
+
+    }
+
+    .registration-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .registration-error {
+
+        padding: 13px 14px;
+
+    }
+
+}

@@ -27,125 +27,20 @@ h2 {
     text-align: center;
 }
 
+
 /* =======================
-    Landing Page Styles
+   Landing Page Styles
    ======================= */
-/* Header Styles */
-header {
-    background-color: var(--Main-Background);
-    height: 75px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
 
-header:after{
-    display: block;
-    content: "";
-    width: 85%;
-    margin: 0 auto;
-    border-bottom: 2px solid black;
-}
-
-/* Navigation Bar */
-.navbar {
-    font-family: var(--Main-Font);
-    font-weight: 300;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    color: #acacac;
-    width: 85%;
-    margin: 0 auto;
-}
-
-.navbar a {
-    color: inherit;
-    text-align: center;
-    padding: 5px 10px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    color: #F4F0E8;
-    transition: 0.3s ease;
-}
-
-.nav-start {
-    color: #fff;
-    cursor: default;
-}
-
-/* Navigation Bar - Middle Section */
-.nav-middle,
-.nav-end {
-    display: flex;
-}
-
-/* Navigation Bar - End Section */
-.nav-end a{
-    background-color: var(--Accent);
-    padding: 5px 10px;
-    border-radius: 15px;
-}
-
-.nav-end a:first-child{ margin-right: 10px; }
-
-/* Navigation Bar - Active Page */
-.navbar a.active {
-    background-color: var(--Accent);
-    border-radius: 30px;
-    color: #fff;
-    transition: 0.3s ease;
-}
-
-.nav-end a:hover,
-a.active:hover {
-    color: #fff;
-    background-color: #12494c;
-}
-
-/* == Mobile Navbar == */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .nav-start,
-    .nav-middle,
-    .nav-end{
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nav-start {
-        margin: 15px 0 5px;
-        text-align: center;
-    }
-    .nav-start:after {
-        display: block;
-        content: "";
-        width: 250px;
-        margin: 0 auto;
-        border-bottom: 2px solid #8c8c8c;
-        padding-bottom: 10px;
-    }
-    .navbar a {
-        margin: 15px 0;
-    }
-    .mobile-hidden { display: none; }
-    .mobile-visible { display: flex; }
-}
 
 /* ===== Main Styles ===== */
+
 .hero {
     background-color: var(--Main-Background);
     display: flex;
     min-height: 650px;
 }
+
 .hero-left {
     flex: 1;
     display: flex;
@@ -160,7 +55,9 @@ a.active:hover {
     margin: 0 auto;
 }
 
+
 /* === Hero Left Section === */
+
 #welcoming-text {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -183,14 +80,22 @@ a.active:hover {
 
 .hero-right {
     flex: 1;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/landingPageOptOne.jpg');
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('../Images/landingPageOptOne.jpg');
+
     background-size: 225% auto;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: inset 5px 15px 25px rgba(0, 0, 0, 0.5);
 }
 
+
 /* === Check Availability Form === */
+
 .check-availability-form {
     background-color: var(--Tertiary-Background);
     padding: 5px 20px 20px;
@@ -239,13 +144,16 @@ a.active:hover {
     padding: 5px;
 }
 
+
 .pricing,
 .reviews {
-	background-color: var(--Secondary-Background);
-	min-height: 650px;
+    background-color: var(--Secondary-Background);
+    min-height: 650px;
 }
 
+
 /* ===== Pricing Section Styles ===== */
+
 .pricing {
     text-align: center;
 }
@@ -284,6 +192,7 @@ a.active:hover {
     margin-bottom: 10px;
 }
 
+
 /* ===== Reviews Section Styles ===== */
 
 .reviews {
@@ -291,10 +200,10 @@ a.active:hover {
 }
 
 .review-row {
-	display: flex;
-	max-width: 1200px;
-	margin: 0 auto;
-	gap: 20px;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
 .review-card {
@@ -308,7 +217,7 @@ a.active:hover {
 }
 
 .review-card:hover {
-	transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 .review-author {
@@ -325,51 +234,7 @@ a.active:hover {
     min-height: 150px;
 }
 
-/* ===== Footer Styles ====== */
-footer {
-    background-color: var(--Main-Background);
-    color: #acacac;
-    text-align: center;
-    padding: 20px 0;
-}
 
-footer > p { margin: 0; }
-
-#team {
-    color: var(--Accent);
-    font-size: small;
-}
-
-.footer-wrapper {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-height: 150px;
-    padding: 0 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-wrapper .column {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    text-align: left;
-    margin: 10px 0;
-}
-
-.footer-wrapper .column a {
-    color: inherit;
-    text-decoration: none;
-    margin: 5px 0;
-    transition: 0.3s ease;
-}
-
-.footer-wrapper .column a:hover {
-    color: #F4F0E8;
-}
 /* =======================
-    End of Landing Page Styles
+   End of Landing Page Styles
    ======================= */

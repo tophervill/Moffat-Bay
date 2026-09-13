@@ -1,0 +1,53 @@
+/* =========================================================
+   MOFFAT BAY MARINA
+   ABOUT US PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   ABOUT US SECTION
+   ========================================================= */
+
+.aboutUs-page {
+
+    background-color: var(--Main-Background);
+
+    color: var(--Muted-Text);
+
+    font-family: var(--Heading-Font);
+
+    overflow: hidden;
+
+}
+
+.company-info {
+
+    text-align: center;
+
+}
+
+.company-info h1 {
+
+    font-size: xx-large;
+
+    font-weight: bold;
+
+}
+
+.company-info h2 {
+
+    font-size: x-large;
+
+}
+
+.company-info img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+
+}
