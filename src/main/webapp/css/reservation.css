@@ -1,0 +1,374 @@
+:root {
+    --Main-Background: #0D1B2A;
+    --Secondary-Background: #F4F0E8;
+    --Tertiary-Background: rgb(53, 62, 74);
+    --Accent: #1A7073;
+    --cards: #FDFBF5;
+    --Muted-Text: #acacac;
+
+    --Heading-Font: 'Inika', sans-serif;
+    --Main-Font: 'Mulish', sans-serif;
+}
+
+
+/* =========================
+   Reservation Page
+   ========================= */
+
+.reservation-page {
+    min-height: calc(100vh - 140px);
+    background-color: var(--Main-Background);
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* =========================
+   Main Reservation Card
+   ========================= */
+
+.reservation-card {
+    width: 100%;
+    max-width: 850px;
+    background-color: var(--cards);
+    border-radius: 12px;
+    padding: 45px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================
+   Heading
+   ========================= */
+
+.reservation-heading {
+    margin-bottom: 35px;
+}
+
+.reservation-eyebrow {
+    margin: 0 0 8px;
+    font-family: var(--Main-Font);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--Accent);
+}
+
+.reservation-heading h1 {
+    margin: 0 0 12px;
+    font-family: var(--Heading-Font);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--Main-Background);
+}
+
+.reservation-description {
+    margin: 0;
+    max-width: 650px;
+    font-family: var(--Main-Font);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--Tertiary-Background);
+}
+
+
+/* =========================
+   Boat Information
+   ========================= */
+
+.boat-information {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: var(--Secondary-Background);
+    border-radius: 10px;
+}
+
+.boat-information h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    background: none;
+    text-align: left;
+    font-family: var(--Heading-Font);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--Main-Background);
+}
+
+.boat-information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.boat-information-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.information-label {
+    font-family: var(--Main-Font);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--Accent);
+}
+
+.information-value {
+    font-family: var(--Main-Font);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Main-Background);
+}
+
+
+/* =========================
+   Reservation Form
+   ========================= */
+
+.reservation-form {
+    margin-top: 10px;
+}
+
+.reservation-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.reservation-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form-group label {
+    margin-bottom: 8px;
+    font-family: var(--Main-Font);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Main-Background);
+}
+
+.reservation-form-group input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: var(--Main-Font);
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.reservation-form-group input:focus {
+    outline: none;
+    border-color: var(--Accent);
+}
+
+
+/* =========================
+   Reservation Information
+   ========================= */
+
+.reservation-information {
+    margin-top: 25px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--Accent);
+    background-color: var(--Secondary-Background);
+}
+
+.reservation-information p {
+    margin: 5px 0;
+    font-family: var(--Main-Font);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--Tertiary-Background);
+}
+
+
+/* =========================
+   Slip Requirement
+   ========================= */
+
+.reservation-check-actions {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slip-requirement {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--Accent);
+    border-radius: 6px;
+    background-color: #E3F0F0;
+    font-family: var(--Main-Font);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--Accent);
+}
+
+.slip-requirement strong {
+    font-weight: 700;
+}
+
+
+/* =========================
+   Error / Notice Message
+   ========================= */
+
+.reservation-message {
+    margin-bottom: 25px;
+    padding: 18px 20px;
+    border-radius: 8px;
+    font-family: var(--Main-Font);
+}
+
+.reservation-message strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reservation-message p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.error-message {
+    border: 1px solid #b95b5b;
+    background-color: #fff1f1;
+    color: #7d2525;
+}
+
+
+/* =========================
+   Wait List
+   ========================= */
+
+.waitlist-card {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: var(--Secondary-Background);
+    border-radius: 10px;
+}
+
+.waitlist-card h2 {
+    margin: 0 0 15px;
+    padding: 0;
+    background: none;
+    text-align: left;
+    font-family: var(--Heading-Font);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--Main-Background);
+}
+
+.waitlist-card p {
+    font-family: var(--Main-Font);
+    line-height: 1.5;
+    color: var(--Tertiary-Background);
+}
+
+.waitlist-date-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.waitlist-date-summary > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* =========================
+   Buttons
+   ========================= */
+
+.reservation-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.reservation-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 6px;
+    font-family: var(--Main-Font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-button {
+    background-color: var(--Accent);
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background-color: #14595c;
+}
+
+.secondary-button {
+    border: 1px solid var(--Accent);
+    background-color: transparent;
+    color: var(--Accent);
+}
+
+.secondary-button:hover {
+    background-color: var(--Accent);
+    color: #ffffff;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .reservation-page {
+        padding: 50px 15px;
+    }
+
+    .reservation-card {
+        padding: 30px 20px;
+    }
+
+    .boat-information-grid,
+    .reservation-form-grid,
+    .waitlist-date-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-actions {
+        flex-direction: column;
+    }
+
+    .reservation-check-actions {
+        align-items: stretch;
+    }
+
+    .slip-requirement {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .reservation-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}

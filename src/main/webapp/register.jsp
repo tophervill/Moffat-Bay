@@ -15,7 +15,6 @@
         Register | Moffat Bay Marina
     </title>
 
-
     <meta name="description"
           content="Create a Moffat Bay Marina account and register your boat.">
 
@@ -40,6 +39,11 @@
 
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/css/styles.css">
+
+    <!-- Registration Page Styles -->
+
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/register.css">
 
 </head>
 
@@ -81,7 +85,6 @@
                 <h2>
                     Why create an account?
                 </h2>
-
 
                 <ul>
 
@@ -158,6 +161,7 @@
                      ========================================= -->
 
                 <%
+
                     String registrationErrorTitle =
                             (String) request.getAttribute(
                                     "registrationErrorTitle"
@@ -167,6 +171,7 @@
                             (String) request.getAttribute(
                                     "registrationError"
                             );
+
                 %>
 
 
@@ -185,16 +190,12 @@
 
 
                             <div class="registration-error-title">
-
                                 <%= registrationErrorTitle %>
-
                             </div>
 
 
                             <div class="registration-error-message">
-
                                 <%= registrationError %>
-
                             </div>
 
 

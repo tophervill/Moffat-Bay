@@ -1,0 +1,197 @@
+/* =========================================================
+   MOFFAT BAY MARINA
+   REGISTRATION SUCCESS PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   REGISTRATION SUCCESS PAGE
+   ========================================================= */
+
+.confirmation-page {
+
+    min-height: calc(100vh - 62px);
+
+    padding: 80px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: var(--Main-Background);
+
+}
+
+
+/* =========================================================
+   CONFIRMATION CARD
+   ========================================================= */
+
+.confirmation-card {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 55px 55px 45px;
+
+    text-align: center;
+
+    background-color: var(--cards);
+
+    border-top: 6px solid var(--Accent);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+
+}
+
+
+/* =========================================================
+   CONFIRMATION ICON
+   ========================================================= */
+
+.confirmation-icon {
+
+    width: 80px;
+
+    height: 80px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background-color: var(--Accent);
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   CONFIRMATION TEXT
+   ========================================================= */
+
+.confirmation-eyebrow {
+
+    margin: 0 0 12px;
+
+    color: var(--Accent);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+.confirmation-card h1 {
+
+    margin: 0 0 20px;
+
+    color: var(--Main-Background);
+
+    font-size: 38px;
+
+}
+
+.confirmation-message {
+
+    max-width: 500px;
+
+    margin: 0 auto 12px;
+
+    color: var(--Main-Background);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+}
+
+.confirmation-details {
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.confirmation-divider {
+
+    width: 70%;
+
+    height: 1px;
+
+    margin: 30px auto;
+
+    background-color: #ddd;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.confirmation-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 5px;
+
+}
+
+.confirmation-login-button {
+
+    min-width: 200px;
+
+    padding: 13px 30px;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   CONFIRMATION NOTE
+   ========================================================= */
+
+.confirmation-note {
+
+    margin: 28px 0 0;
+
+    color: #777;
+
+    font-size: 14px;
+
+}

@@ -15,6 +15,22 @@ public class DBUtil {
     private static final String PASSWORD =
             "MoffatBay2026!";
 
+    static {
+        try {
+
+            Class.forName(
+                    "com.mysql.cj.jdbc.Driver"
+            );
+
+        } catch (ClassNotFoundException e) {
+
+            throw new RuntimeException(
+                    "MySQL JDBC driver could not be loaded.",
+                    e
+            );
+        }
+    }
+
     private DBUtil() {
     }
 

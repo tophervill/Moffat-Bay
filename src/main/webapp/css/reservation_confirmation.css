@@ -1,0 +1,276 @@
+:root {
+    --Main-Background: #0D1B2A;
+    --Secondary-Background: #F4F0E8;
+    --Tertiary-Background: rgb(53, 62, 74);
+    --Accent: #1A7073;
+    --cards: #FDFBF5;
+    --Muted-Text: #acacac;
+
+    --Heading-Font: 'Inika', sans-serif;
+    --Main-Font: 'Mulish', sans-serif;
+}
+
+
+/* =========================
+   Confirmation Page
+   ========================= */
+
+.confirmation-page {
+    min-height: calc(100vh - 140px);
+    padding: 90px 20px;
+    background-color: var(--Main-Background);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* =========================
+   Main Card
+   ========================= */
+
+.confirmation-card {
+    width: 100%;
+    max-width: 850px;
+    padding: 45px;
+    border-radius: 12px;
+    background-color: var(--cards);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================
+   Heading
+   ========================= */
+
+.confirmation-heading {
+    margin-bottom: 30px;
+}
+
+.confirmation-eyebrow {
+    margin: 0 0 8px;
+    font-family: var(--Main-Font);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--Accent);
+}
+
+.confirmation-heading h1 {
+    margin: 0 0 12px;
+    font-family: var(--Heading-Font);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--Main-Background);
+}
+
+.confirmation-description {
+    margin: 0;
+    font-family: var(--Main-Font);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--Tertiary-Background);
+}
+
+
+/* =========================
+   Reservation Number
+   ========================= */
+
+.confirmation-number {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid var(--Accent);
+    border-radius: 8px;
+    background-color: #E3F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confirmation-number-label {
+    font-family: var(--Main-Font);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Accent);
+}
+
+.confirmation-number-value {
+    font-family: var(--Heading-Font);
+    font-size: 28px;
+    color: var(--Accent);
+}
+
+
+/* =========================
+   Information Sections
+   ========================= */
+
+.confirmation-section {
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: var(--Secondary-Background);
+}
+
+.confirmation-section h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    background: none;
+    text-align: left;
+    font-family: var(--Heading-Font);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--Main-Background);
+}
+
+.confirmation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.confirmation-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.confirmation-label {
+    font-family: var(--Main-Font);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--Accent);
+}
+
+.confirmation-value {
+    font-family: var(--Main-Font);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--Main-Background);
+}
+
+
+/* =========================
+   Cost
+   ========================= */
+
+.confirmation-cost {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid var(--Accent);
+    border-radius: 8px;
+    background-color: #E3F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confirmation-cost-label {
+    font-family: var(--Main-Font);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Accent);
+}
+
+.confirmation-cost-value {
+    font-family: var(--Heading-Font);
+    font-size: 28px;
+    color: var(--Accent);
+}
+
+
+/* =========================
+   Actions
+   ========================= */
+
+.confirmation-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirmation-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--Accent);
+    color: #ffffff;
+    font-family: var(--Main-Font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.confirmation-button:hover {
+    background-color: #14595c;
+}
+
+
+/* =========================
+   Error
+   ========================= */
+
+.confirmation-error {
+    padding: 20px;
+    border: 1px solid #b95b5b;
+    border-radius: 8px;
+    background-color: #fff1f1;
+    font-family: var(--Main-Font);
+    color: #7d2525;
+}
+
+.confirmation-error strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.confirmation-error p {
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .confirmation-page {
+        padding: 50px 15px;
+    }
+
+    .confirmation-card {
+        padding: 30px 20px;
+    }
+
+    .confirmation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confirmation-number,
+    .confirmation-cost {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+    }
+
+    .confirmation-button {
+        width: 100%;
+    }
+
+}
