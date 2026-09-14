@@ -6,31 +6,20 @@
 :root {
 
     /* Christopher's shared color scheme */
-
     --Main-Background: #0D1B2A;
-
     --Secondary-Background: #F4F0E8;
-
     --Tertiary-Background: rgb(53, 62, 74);
-
     --Accent: #1A7073;
-
     --cards: #FDFBF5;
-
     --Muted-Text: #acacac;
 
     /* Shared fonts */
-
     --Heading-Font: 'Inika', sans-serif;
-
     --Main-Font: 'Mulish', sans-serif;
 
     /* Common values */
-
     --Border-Radius: 10px;
-
     --Card-Shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
-
 }
 
 
@@ -39,22 +28,16 @@
    ========================================================= */
 
 * {
-
     box-sizing: border-box;
-
 }
 
 html,
 body {
-
     margin: 0;
-
     padding: 0;
-
 }
 
 body {
-
     min-height: 100vh;
 
     font-family: var(--Main-Font);
@@ -62,29 +45,22 @@ body {
     color: #111;
 
     background-color: var(--Secondary-Background);
-
 }
 
 h1,
 h2,
 h3,
 h4 {
-
     font-family: var(--Heading-Font);
-
 }
 
 a {
-
     color: inherit;
-
 }
 
 button,
 input {
-
     font: inherit;
-
 }
 
 
@@ -93,135 +69,71 @@ input {
    ========================================================= */
 
 .site-header {
-
     width: 100%;
 
     background-color: var(--Main-Background);
-
 }
 
 .navbar {
-
-    width: 94%;
-
-    max-width: 1500px;
-
-    min-height: 75px;
+    width: 86%;
+    max-width: 1150px;
+    min-height: 62px;
 
     margin: 0 auto;
 
     display: flex;
-
     align-items: center;
 
-    gap: 18px;
+    gap: 25px;
 
     border-bottom: 2px solid #05090d;
-
 }
 
 .brand {
-
-    width: 400px;
-
-    height: 60px;
-
     margin-right: auto;
 
-    display: flex;
-
-    align-items: center;
-
-    flex-shrink: 0;
-
-    overflow: hidden;
+    color: white;
 
     text-decoration: none;
 
-}
+    font-family: var(--Main-Font);
 
-.header-logo {
+    font-size: 16px;
 
-    display: block;
-
-    width: 400px;
-
-    height: 60px;
-
-    max-width: 400px;
-
-    max-height: 60px;
-
-    object-fit: contain;
-
+    white-space: nowrap;
 }
 
 .nav-links,
 .nav-actions {
-
     display: flex;
 
     align-items: center;
 
-    gap: 8px;
-
-    flex-wrap: nowrap;
-
+    gap: 6px;
 }
 
 .nav-link {
-
     padding: 8px 12px;
 
     color: var(--Muted-Text);
-
-    background-color: transparent;
 
     text-decoration: none;
 
     border-radius: 20px;
 
-    white-space: nowrap;
-
     transition:
         background-color 0.2s ease,
         color 0.2s ease;
-
 }
 
-.nav-link:hover {
-
-    color: white;
-
-    background-color: #12494c;
-
-}
-
+.nav-link:hover,
 .nav-link.active {
-
     color: white;
 
     background-color: var(--Accent);
-
 }
-
-.nav-status {
-
-    padding: 8px 12px;
-
-    color: var(--Muted-Text);
-
-    background-color: transparent;
-
-    white-space: nowrap;
-
-}
-
-
-/* Existing nav-pill style retained for compatibility */
 
 .nav-pill {
-
     padding: 8px 14px;
 
     color: var(--Muted-Text);
@@ -235,15 +147,12 @@ input {
     transition:
         color 0.2s ease,
         opacity 0.2s ease;
-
 }
 
 .nav-pill:hover {
-
     color: white;
 
     opacity: 0.92;
-
 }
 
 
@@ -252,7 +161,6 @@ input {
    ========================================================= */
 
 .page-hero {
-
     padding: 70px 20px 65px;
 
     text-align: center;
@@ -260,19 +168,15 @@ input {
     color: white;
 
     background-color: var(--Main-Background);
-
 }
 
 .page-hero h1 {
-
     margin: 0 0 12px;
 
     font-size: 42px;
-
 }
 
 .page-hero p {
-
     max-width: 700px;
 
     margin: 0 auto;
@@ -282,7 +186,6 @@ input {
     font-size: 18px;
 
     line-height: 1.6;
-
 }
 
 
@@ -291,23 +194,18 @@ input {
    ========================================================= */
 
 .page-section {
-
     min-height: 550px;
 
     padding: 55px 20px 80px;
 
     background-color: var(--Secondary-Background);
-
 }
 
 .content-shell {
-
     width: 90%;
-
     max-width: 900px;
 
     margin: 0 auto;
-
 }
 
 
@@ -316,7 +214,6 @@ input {
    ========================================================= */
 
 .content-card {
-
     padding: 35px;
 
     background-color: var(--cards);
@@ -324,29 +221,23 @@ input {
     border-radius: var(--Border-Radius);
 
     box-shadow: var(--Card-Shadow);
-
 }
 
 .content-card h2 {
-
     margin-top: 0;
 
     color: var(--Main-Background);
 
     font-size: 27px;
-
 }
 
 .card-description {
-
     margin-top: -5px;
-
     margin-bottom: 28px;
 
     color: #666;
 
     line-height: 1.5;
-
 }
 
 
@@ -355,41 +246,32 @@ input {
    ========================================================= */
 
 .form-grid {
-
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
     gap: 22px;
-
 }
 
 .form-group {
-
     display: flex;
 
     flex-direction: column;
-
 }
 
 .full-width {
-
     grid-column: 1 / -1;
-
 }
 
 .form-group label {
-
     margin-bottom: 7px;
 
     color: var(--Main-Background);
 
     font-weight: 700;
-
 }
 
 .form-group input {
-
     width: 100%;
 
     padding: 13px 14px;
@@ -405,27 +287,22 @@ input {
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
-
 }
 
 .form-group input:focus {
-
     outline: none;
 
     border-color: var(--Accent);
 
     box-shadow: 0 0 0 3px rgba(26, 112, 115, 0.15);
-
 }
 
 .form-group small {
-
     margin-top: 6px;
 
     color: #707070;
 
     font-size: 12px;
-
 }
 
 
@@ -435,7 +312,6 @@ input {
 
 .primary-button,
 .secondary-button {
-
     display: inline-block;
 
     padding: 12px 24px;
@@ -455,36 +331,28 @@ input {
     transition:
         opacity 0.2s ease,
         transform 0.2s ease;
-
 }
 
 .primary-button {
-
     color: white;
 
     background-color: var(--Accent);
-
 }
 
 .secondary-button {
-
     color: var(--Main-Background);
 
     background-color: #e3e3e3;
-
 }
 
 .primary-button:hover,
 .secondary-button:hover {
-
     opacity: 0.9;
 
     transform: translateY(-1px);
-
 }
 
 .button-row {
-
     display: flex;
 
     justify-content: center;
@@ -492,7 +360,381 @@ input {
     gap: 15px;
 
     margin-top: 30px;
+}
 
+
+/* =========================================================
+   REGISTRATION PAGE
+   ========================================================= */
+
+.registration-page {
+    min-height: calc(100vh - 62px);
+
+    padding: 65px 7% 80px;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background-color: var(--Main-Background);
+}
+
+
+/* Registration information */
+
+.registration-intro {
+    max-width: 520px;
+
+    color: white;
+}
+
+.registration-eyebrow {
+    margin: 0 0 15px;
+
+    color: #3aa6aa;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.registration-intro h1 {
+    margin: 0 0 20px;
+
+    font-size: 46px;
+}
+
+.registration-intro > p {
+    color: var(--Muted-Text);
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+.registration-info {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background-color: var(--Tertiary-Background);
+
+    border-left: 5px solid var(--Accent);
+
+    border-radius: 8px;
+}
+
+.registration-info h2 {
+    margin-top: 0;
+
+    font-size: 21px;
+}
+
+.registration-info ul {
+    margin-bottom: 0;
+
+    padding-left: 22px;
+
+    color: #eee;
+
+    line-height: 1.9;
+}
+
+.slip-reminder {
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.slip-reminder span {
+    padding: 7px 13px;
+
+    color: white;
+
+    background-color: var(--Accent);
+
+    border-radius: 20px;
+}
+
+
+/* Registration form card */
+
+.registration-form-wrapper {
+    width: 100%;
+
+    max-width: 680px;
+}
+
+.registration-card {
+    padding: 40px;
+
+    background-color: var(--cards);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+.registration-card h2 {
+    margin: 0 0 5px;
+
+    color: var(--Main-Background);
+
+    font-size: 30px;
+}
+
+.registration-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+.registration-submit-button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   REGISTRATION ERROR
+   ========================================================= */
+
+.registration-error {
+    width: 100%;
+
+    margin: 0 0 25px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    background-color: #f8e7e7;
+
+    border: 1px solid #e6bcbc;
+
+    border-left: 5px solid #a43b3b;
+
+    border-radius: 7px;
+}
+
+.registration-error-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    background-color: #a43b3b;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+.registration-error-content {
+    flex: 1;
+}
+
+.registration-error-title {
+    margin-bottom: 4px;
+
+    color: #812d2d;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+.registration-error-message {
+    color: #6d3535;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* Login link */
+
+.login-link {
+    margin-top: 25px;
+
+    color: #666;
+
+    text-align: center;
+}
+
+.login-link a {
+    color: var(--Accent);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   REGISTRATION SUCCESS PAGE
+   ========================================================= */
+
+.confirmation-page {
+    min-height: calc(100vh - 62px);
+
+    padding: 80px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: var(--Main-Background);
+}
+
+.confirmation-card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 55px 55px 45px;
+
+    text-align: center;
+
+    background-color: var(--cards);
+
+    border-top: 6px solid var(--Accent);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+.confirmation-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    background-color: var(--Accent);
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    font-weight: 700;
+}
+
+.confirmation-eyebrow {
+    margin: 0 0 12px;
+
+    color: var(--Accent);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.confirmation-card h1 {
+    margin: 0 0 20px;
+
+    color: var(--Main-Background);
+
+    font-size: 38px;
+}
+
+.confirmation-message {
+    max-width: 500px;
+
+    margin: 0 auto 12px;
+
+    color: var(--Main-Background);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.confirmation-details {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+.confirmation-divider {
+    width: 70%;
+
+    height: 1px;
+
+    margin: 30px auto;
+
+    background-color: #ddd;
+}
+
+.confirmation-actions {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 5px;
+}
+
+.confirmation-login-button {
+    min-width: 200px;
+
+    padding: 13px 30px;
+
+    font-size: 16px;
+}
+
+.confirmation-note {
+    margin: 28px 0 0;
+
+    color: #777;
+
+    font-size: 14px;
 }
 
 
@@ -501,15 +743,12 @@ input {
    ========================================================= */
 
 .lookup-card {
-
     max-width: 760px;
 
     margin: 0 auto;
-
 }
 
 .lookup-divider {
-
     position: relative;
 
     margin: 22px 0;
@@ -517,12 +756,10 @@ input {
     text-align: center;
 
     color: #777;
-
 }
 
 .lookup-divider::before,
 .lookup-divider::after {
-
     content: "";
 
     position: absolute;
@@ -534,29 +771,22 @@ input {
     height: 1px;
 
     background-color: #d2d2d2;
-
 }
 
 .lookup-divider::before {
-
     left: 0;
-
 }
 
 .lookup-divider::after {
-
     right: 0;
-
 }
 
 .reservation-result {
-
     margin-top: 35px;
 
     padding-top: 28px;
 
     border-top: 1px solid #ddd;
-
 }
 
 
@@ -565,15 +795,12 @@ input {
    ========================================================= */
 
 .summary-card {
-
     max-width: 720px;
 
     margin: 0 auto;
-
 }
 
 .summary-row {
-
     display: flex;
 
     justify-content: space-between;
@@ -583,27 +810,21 @@ input {
     padding: 14px 0;
 
     border-bottom: 1px solid #ddd;
-
 }
 
 .summary-label {
-
     color: #666;
-
 }
 
 .summary-value {
-
     color: var(--Main-Background);
 
     font-weight: 700;
 
     text-align: right;
-
 }
 
 .price-box {
-
     margin-top: 30px;
 
     padding: 25px;
@@ -613,19 +834,15 @@ input {
     background-color: var(--Tertiary-Background);
 
     border-radius: 8px;
-
 }
 
 .price-box p {
-
     margin: 0;
 
     color: var(--Muted-Text);
-
 }
 
 .monthly-price {
-
     margin: 7px 0 0;
 
     color: white;
@@ -633,7 +850,6 @@ input {
     font-family: var(--Heading-Font);
 
     font-size: 40px;
-
 }
 
 
@@ -642,17 +858,14 @@ input {
    ========================================================= */
 
 .waitlist-grid {
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
-
 }
 
 .waitlist-card {
-
     padding: 35px 25px;
 
     text-align: center;
@@ -664,21 +877,17 @@ input {
     border-radius: var(--Border-Radius);
 
     box-shadow: var(--Card-Shadow);
-
 }
 
 .waitlist-card h2 {
-
     margin-top: 0;
 
     color: var(--Main-Background);
 
     font-size: 23px;
-
 }
 
 .wait-number {
-
     margin: 10px 0;
 
     color: var(--Accent);
@@ -686,17 +895,13 @@ input {
     font-family: var(--Heading-Font);
 
     font-size: 52px;
-
 }
 
 .wait-label {
-
     color: #666;
-
 }
 
 .privacy-message {
-
     max-width: 720px;
 
     margin: 35px auto 0;
@@ -710,180 +915,95 @@ input {
     background-color: var(--cards);
 
     border-radius: 8px;
-
 }
 
 
 /* =========================================================
-   SHARED FOOTER
+   FOOTER
    ========================================================= */
 
 .site-footer {
-
-    width: 100%;
-
-    padding: 35px 0 20px;
+    padding: 45px 0 30px;
 
     color: var(--Muted-Text);
 
-    background-color: var(--Main-Background);
-
+    background-color: var(--Tertiary-Background);
 }
 
-
-/* Main footer layout */
-
-.footer-wrapper {
-
-    width: 94%;
-
-    max-width: 1500px;
+.footer-content {
+    width: 86%;
+    max-width: 1150px;
 
     margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-
-    column-gap: 80px;
-
-    align-items: start;
-
 }
 
-
-/* Individual footer columns */
-
-.footer-column {
-
+.footer-main {
     display: flex;
 
-    flex-direction: column;
+    justify-content: space-between;
 
-    align-items: flex-start;
-
-    text-align: left;
-
+    gap: 50px;
 }
 
+.footer-brand h2 {
+    margin-top: 0;
 
-/* Logo / description column */
+    color: white;
 
-.footer-brand-column {
-
-    padding-right: 30px;
-
+    font-size: 22px;
 }
 
-.footer-logo {
-
-    display: block;
-
-    width: 280px;
-
-    max-width: 100%;
-
-    height: auto;
-
-    max-height: 60px;
-
-    margin-bottom: 12px;
-
-    object-fit: contain;
-
-}
-
-.footer-description {
-
-    max-width: 320px;
-
-    margin: 0;
+.footer-brand p {
+    max-width: 400px;
 
     line-height: 1.6;
-
 }
 
+.footer-links {
+    display: flex;
 
-/* Footer links */
+    flex-wrap: wrap;
 
-.footer-column a {
+    gap: 30px;
+}
 
-    margin: 6px 0;
-
+.footer-links a {
     color: var(--Muted-Text);
 
     text-decoration: none;
-
-    transition: color 0.3s ease;
-
 }
 
-.footer-column a:hover {
-
-    color: var(--Secondary-Background);
-
+.footer-links a:hover {
+    color: white;
 }
 
+.footer-bottom {
+    margin-top: 35px;
 
-/* Contact column */
-
-.footer-contact-column {
-
-    justify-self: end;
-
-}
-
-
-/* Footer divider */
-
-.site-footer hr {
-
-    width: 94%;
-
-    max-width: 1500px;
-
-    margin: 25px auto 15px;
-
-    border: 0;
+    padding-top: 20px;
 
     border-top: 1px solid #5b626c;
 
-}
-
-
-/* Copyright */
-
-.footer-copyright {
-
-    margin: 0;
-
-    text-align: center;
-
+    font-size: 14px;
 }
 
 
 /* =========================================================
-   RESPONSIVE - FOOTER TABLET
+   RESPONSIVE - TABLET
    ========================================================= */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
 
-    .footer-wrapper {
+    .registration-page {
+        grid-template-columns: 1fr;
 
-        grid-template-columns: 1.5fr 1fr 1fr;
-
-        column-gap: 40px;
-
-        row-gap: 30px;
-
+        gap: 40px;
     }
 
-    .footer-contact-column {
-
-        justify-self: start;
-
+    .registration-intro,
+    .registration-form-wrapper {
+        max-width: 720px;
     }
-
 }
 
 
@@ -894,95 +1014,29 @@ input {
 @media screen and (max-width: 800px) {
 
     .navbar {
-
         flex-wrap: wrap;
 
         padding: 12px 0;
-
     }
 
     .brand {
-
         width: 100%;
 
-        height: auto;
-
         margin-bottom: 8px;
-
-        justify-content: center;
-
-        overflow: visible;
-
-    }
-
-    .header-logo {
-
-        width: 400px;
-
-        height: auto;
-
-        max-width: 100%;
-
-        max-height: 60px;
-
     }
 
     .nav-links,
     .nav-actions {
-
         flex-wrap: wrap;
-
     }
 
     .waitlist-grid {
-
         grid-template-columns: 1fr;
-
     }
 
-
-    /* Footer */
-
-    .footer-wrapper {
-
-        width: 90%;
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
+    .footer-main {
+        flex-direction: column;
     }
-
-    .footer-column,
-    .footer-brand-column,
-    .footer-contact-column {
-
-        width: 100%;
-
-        padding-right: 0;
-
-        align-items: center;
-
-        justify-self: center;
-
-        text-align: center;
-
-    }
-
-    .footer-description {
-
-        text-align: center;
-
-    }
-
-    .footer-logo {
-
-        margin-left: auto;
-
-        margin-right: auto;
-
-    }
-
 }
 
 
@@ -993,69 +1047,107 @@ input {
 @media screen and (max-width: 600px) {
 
     .page-hero {
-
         padding: 50px 20px;
-
     }
 
     .page-hero h1 {
-
         font-size: 34px;
-
     }
 
 
-    /* Common cards/forms */
+    /* Registration */
 
+    .registration-page {
+        padding: 45px 20px 60px;
+    }
+
+    .registration-intro h1 {
+        font-size: 36px;
+    }
+
+    .registration-card,
     .content-card {
-
         padding: 25px 20px;
-
     }
 
+    .registration-form,
     .form-grid {
-
         grid-template-columns: 1fr;
-
     }
 
     .full-width {
-
         grid-column: auto;
+    }
 
+
+    /* Registration error */
+
+    .registration-error {
+        padding: 13px 14px;
+    }
+
+
+    /* Registration confirmation */
+
+    .confirmation-page {
+        min-height: 600px;
+
+        padding: 45px 20px;
+    }
+
+    .confirmation-card {
+        padding: 40px 25px 35px;
+    }
+
+    .confirmation-icon {
+        width: 68px;
+        height: 68px;
+
+        font-size: 36px;
+    }
+
+    .confirmation-card h1 {
+        font-size: 30px;
+    }
+
+    .confirmation-message {
+        font-size: 17px;
+    }
+
+    .confirmation-details {
+        font-size: 15px;
+    }
+
+    .confirmation-divider {
+        width: 90%;
+    }
+
+    .confirmation-login-button {
+        width: 100%;
     }
 
 
     /* Reservation summary */
 
     .summary-row {
-
         flex-direction: column;
 
         gap: 4px;
-
     }
 
     .summary-value {
-
         text-align: left;
-
     }
 
 
     /* Buttons */
 
     .button-row {
-
         flex-direction: column;
-
     }
 
     .primary-button,
     .secondary-button {
-
         width: 100%;
-
     }
-
 }
