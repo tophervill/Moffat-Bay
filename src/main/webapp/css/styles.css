@@ -3,9 +3,12 @@
    SHARED SITE STYLES
    ========================================================= */
 
-:root {
 
-    /* Christopher's shared color scheme */
+/* =========================================================
+   SHARED VARIABLES
+   ========================================================= */
+
+:root {
 
     --Main-Background: #0D1B2A;
 
@@ -19,13 +22,11 @@
 
     --Muted-Text: #acacac;
 
-    /* Shared fonts */
 
     --Heading-Font: 'Inika', sans-serif;
 
     --Main-Font: 'Mulish', sans-serif;
 
-    /* Common values */
 
     --Border-Radius: 10px;
 
@@ -89,7 +90,7 @@ input {
 
 
 /* =========================================================
-   HEADER / NAVIGATION
+   SHARED HEADER / NAVIGATION
    ========================================================= */
 
 .site-header {
@@ -119,6 +120,11 @@ input {
     border-bottom: 2px solid #05090d;
 
 }
+
+
+/* =========================================================
+   HEADER LOGO
+   ========================================================= */
 
 .brand {
 
@@ -155,6 +161,11 @@ input {
     object-fit: contain;
 
 }
+
+
+/* =========================================================
+   HEADER LINKS
+   ========================================================= */
 
 .nav-links,
 .nav-actions {
@@ -218,151 +229,13 @@ input {
 }
 
 
-/* Existing nav-pill style retained for compatibility */
-
-.nav-pill {
-
-    padding: 8px 14px;
-
-    color: var(--Muted-Text);
-
-    background-color: var(--Accent);
-
-    text-decoration: none;
-
-    border-radius: 20px;
-
-    transition:
-        color 0.2s ease,
-        opacity 0.2s ease;
-
-}
-
-.nav-pill:hover {
-
-    color: white;
-
-    opacity: 0.92;
-
-}
-
-
 /* =========================================================
-   COMMON PAGE HERO
+   TEMPORARY SHARED FORM STYLES
+
+   These are still used by the existing Login and
+   Registration pages. They can be moved into those
+   page-specific CSS files later.
    ========================================================= */
-
-.page-hero {
-
-    padding: 70px 20px 65px;
-
-    text-align: center;
-
-    color: white;
-
-    background-color: var(--Main-Background);
-
-}
-
-.page-hero h1 {
-
-    margin: 0 0 12px;
-
-    font-size: 42px;
-
-}
-
-.page-hero p {
-
-    max-width: 700px;
-
-    margin: 0 auto;
-
-    color: var(--Muted-Text);
-
-    font-size: 18px;
-
-    line-height: 1.6;
-
-}
-
-
-/* =========================================================
-   COMMON PAGE CONTENT
-   ========================================================= */
-
-.page-section {
-
-    min-height: 550px;
-
-    padding: 55px 20px 80px;
-
-    background-color: var(--Secondary-Background);
-
-}
-
-.content-shell {
-
-    width: 90%;
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-}
-
-
-/* =========================================================
-   COMMON CARDS
-   ========================================================= */
-
-.content-card {
-
-    padding: 35px;
-
-    background-color: var(--cards);
-
-    border-radius: var(--Border-Radius);
-
-    box-shadow: var(--Card-Shadow);
-
-}
-
-.content-card h2 {
-
-    margin-top: 0;
-
-    color: var(--Main-Background);
-
-    font-size: 27px;
-
-}
-
-.card-description {
-
-    margin-top: -5px;
-
-    margin-bottom: 28px;
-
-    color: #666;
-
-    line-height: 1.5;
-
-}
-
-
-/* =========================================================
-   COMMON FORMS
-   ========================================================= */
-
-.form-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 22px;
-
-}
 
 .form-group {
 
@@ -430,15 +303,40 @@ input {
 
 
 /* =========================================================
-   COMMON BUTTONS
+   TEMPORARY SHARED DESCRIPTION STYLE
+
+   Currently required by the Registration page.
    ========================================================= */
 
-.primary-button,
-.secondary-button {
+.card-description {
+
+    margin-top: -5px;
+
+    margin-bottom: 28px;
+
+    color: #666;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   TEMPORARY SHARED PRIMARY BUTTON
+
+   Currently required by Registration and
+   Registration Success.
+   ========================================================= */
+
+.primary-button {
 
     display: inline-block;
 
     padding: 12px 24px;
+
+    color: white;
+
+    background-color: var(--Accent);
 
     border: none;
 
@@ -458,258 +356,11 @@ input {
 
 }
 
-.primary-button {
-
-    color: white;
-
-    background-color: var(--Accent);
-
-}
-
-.secondary-button {
-
-    color: var(--Main-Background);
-
-    background-color: #e3e3e3;
-
-}
-
-.primary-button:hover,
-.secondary-button:hover {
+.primary-button:hover {
 
     opacity: 0.9;
 
     transform: translateY(-1px);
-
-}
-
-.button-row {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    margin-top: 30px;
-
-}
-
-
-/* =========================================================
-   RESERVATION LOOKUP
-   ========================================================= */
-
-.lookup-card {
-
-    max-width: 760px;
-
-    margin: 0 auto;
-
-}
-
-.lookup-divider {
-
-    position: relative;
-
-    margin: 22px 0;
-
-    text-align: center;
-
-    color: #777;
-
-}
-
-.lookup-divider::before,
-.lookup-divider::after {
-
-    content: "";
-
-    position: absolute;
-
-    top: 50%;
-
-    width: 42%;
-
-    height: 1px;
-
-    background-color: #d2d2d2;
-
-}
-
-.lookup-divider::before {
-
-    left: 0;
-
-}
-
-.lookup-divider::after {
-
-    right: 0;
-
-}
-
-.reservation-result {
-
-    margin-top: 35px;
-
-    padding-top: 28px;
-
-    border-top: 1px solid #ddd;
-
-}
-
-
-/* =========================================================
-   RESERVATION SUMMARY
-   ========================================================= */
-
-.summary-card {
-
-    max-width: 720px;
-
-    margin: 0 auto;
-
-}
-
-.summary-row {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 25px;
-
-    padding: 14px 0;
-
-    border-bottom: 1px solid #ddd;
-
-}
-
-.summary-label {
-
-    color: #666;
-
-}
-
-.summary-value {
-
-    color: var(--Main-Background);
-
-    font-weight: 700;
-
-    text-align: right;
-
-}
-
-.price-box {
-
-    margin-top: 30px;
-
-    padding: 25px;
-
-    text-align: center;
-
-    background-color: var(--Tertiary-Background);
-
-    border-radius: 8px;
-
-}
-
-.price-box p {
-
-    margin: 0;
-
-    color: var(--Muted-Text);
-
-}
-
-.monthly-price {
-
-    margin: 7px 0 0;
-
-    color: white;
-
-    font-family: var(--Heading-Font);
-
-    font-size: 40px;
-
-}
-
-
-/* =========================================================
-   WAIT LIST
-   ========================================================= */
-
-.waitlist-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
-}
-
-.waitlist-card {
-
-    padding: 35px 25px;
-
-    text-align: center;
-
-    background-color: var(--cards);
-
-    border-top: 5px solid var(--Accent);
-
-    border-radius: var(--Border-Radius);
-
-    box-shadow: var(--Card-Shadow);
-
-}
-
-.waitlist-card h2 {
-
-    margin-top: 0;
-
-    color: var(--Main-Background);
-
-    font-size: 23px;
-
-}
-
-.wait-number {
-
-    margin: 10px 0;
-
-    color: var(--Accent);
-
-    font-family: var(--Heading-Font);
-
-    font-size: 52px;
-
-}
-
-.wait-label {
-
-    color: #666;
-
-}
-
-.privacy-message {
-
-    max-width: 720px;
-
-    margin: 35px auto 0;
-
-    padding: 20px;
-
-    text-align: center;
-
-    color: #666;
-
-    background-color: var(--cards);
-
-    border-radius: 8px;
 
 }
 
@@ -731,7 +382,9 @@ input {
 }
 
 
-/* Main footer layout */
+/* =========================================================
+   FOOTER LAYOUT
+   ========================================================= */
 
 .footer-wrapper {
 
@@ -752,7 +405,9 @@ input {
 }
 
 
-/* Individual footer columns */
+/* =========================================================
+   FOOTER COLUMNS
+   ========================================================= */
 
 .footer-column {
 
@@ -767,7 +422,9 @@ input {
 }
 
 
-/* Logo / description column */
+/* =========================================================
+   FOOTER BRAND
+   ========================================================= */
 
 .footer-brand-column {
 
@@ -804,7 +461,9 @@ input {
 }
 
 
-/* Footer links */
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
 
 .footer-column a {
 
@@ -825,7 +484,9 @@ input {
 }
 
 
-/* Contact column */
+/* =========================================================
+   FOOTER CONTACT
+   ========================================================= */
 
 .footer-contact-column {
 
@@ -834,7 +495,9 @@ input {
 }
 
 
-/* Footer divider */
+/* =========================================================
+   FOOTER DIVIDER
+   ========================================================= */
 
 .site-footer hr {
 
@@ -851,7 +514,9 @@ input {
 }
 
 
-/* Copyright */
+/* =========================================================
+   FOOTER COPYRIGHT
+   ========================================================= */
 
 .footer-copyright {
 
@@ -863,7 +528,7 @@ input {
 
 
 /* =========================================================
-   RESPONSIVE - FOOTER TABLET
+   RESPONSIVE - TABLET
    ========================================================= */
 
 @media screen and (max-width: 1000px) {
@@ -934,12 +599,6 @@ input {
 
     }
 
-    .waitlist-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
 
     /* Footer */
 
@@ -992,67 +651,13 @@ input {
 
 @media screen and (max-width: 600px) {
 
-    .page-hero {
-
-        padding: 50px 20px;
-
-    }
-
-    .page-hero h1 {
-
-        font-size: 34px;
-
-    }
-
-
-    /* Common cards/forms */
-
-    .content-card {
-
-        padding: 25px 20px;
-
-    }
-
-    .form-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
     .full-width {
 
         grid-column: auto;
 
     }
 
-
-    /* Reservation summary */
-
-    .summary-row {
-
-        flex-direction: column;
-
-        gap: 4px;
-
-    }
-
-    .summary-value {
-
-        text-align: left;
-
-    }
-
-
-    /* Buttons */
-
-    .button-row {
-
-        flex-direction: column;
-
-    }
-
-    .primary-button,
-    .secondary-button {
+    .primary-button {
 
         width: 100%;
 

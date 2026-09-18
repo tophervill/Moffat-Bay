@@ -1,0 +1,397 @@
+/* =========================================================
+   MOFFAT BAY MARINA
+   CONTACT US PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.contact-page {
+
+    width: 100%;
+
+    background-color: var(--Main-Background);
+
+    color: var(--Muted-Text);
+
+}
+
+.contact-container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.contact-hero {
+
+    padding: 75px 20px;
+
+    background-color: var(--Main-Background);
+
+}
+
+.contact-eyebrow {
+
+    margin: 0 0 10px;
+
+    color: var(--Accent);
+
+    font-family: var(--Main-Font);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+.contact-hero h1 {
+
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-family: var(--Heading-Font);
+
+    font-size: 44px;
+
+    font-weight: 400;
+
+}
+
+.contact-intro {
+
+    max-width: 750px;
+
+    margin: 0;
+
+    color: var(--Muted-Text);
+
+    font-family: var(--Main-Font);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+.contact-section {
+
+    padding: 70px 20px;
+
+    background-color: var(--Secondary-Background);
+
+}
+
+.contact-section h2 {
+
+    margin: 0 0 12px;
+
+    color: var(--Main-Background);
+
+    font-family: var(--Heading-Font);
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+}
+
+.section-description {
+
+    margin: 0 0 35px;
+
+    color: var(--Tertiary-Background);
+
+    font-family: var(--Main-Font);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+   ========================================================= */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+.contact-card {
+
+    padding: 30px;
+
+    background-color: var(--cards);
+
+    border-radius: 10px;
+
+    box-shadow: var(--Card-Shadow);
+
+}
+
+.contact-card-label {
+
+    margin: 0 0 8px;
+
+    color: var(--Accent);
+
+    font-family: var(--Main-Font);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+.contact-card h3 {
+
+    margin: 0 0 12px;
+
+    color: var(--Main-Background);
+
+    font-family: var(--Heading-Font);
+
+    font-size: 23px;
+
+    font-weight: 400;
+
+}
+
+.contact-link {
+
+    color: var(--Tertiary-Background);
+
+    font-family: var(--Main-Font);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+.contact-link:hover {
+
+    color: var(--Accent);
+
+}
+
+.contact-card-value {
+
+    margin: 0;
+
+    color: var(--Tertiary-Background);
+
+    font-family: var(--Main-Font);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   HOURS
+   ========================================================= */
+
+.contact-hours-section {
+
+    padding: 70px 20px;
+
+    background-color: var(--Main-Background);
+
+}
+
+.contact-hours-card {
+
+    display: grid;
+
+    grid-template-columns: 1.25fr 1fr;
+
+    gap: 60px;
+
+    padding: 45px;
+
+    background-color: var(--cards);
+
+    border-radius: 12px;
+
+    box-shadow: var(--Card-Shadow);
+
+}
+
+.hours-content h2 {
+
+    margin: 0 0 25px;
+
+    color: var(--Main-Background);
+
+    font-family: var(--Heading-Font);
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+}
+
+.hours-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 0;
+
+    color: var(--Tertiary-Background);
+
+    font-family: var(--Main-Font);
+
+    border-bottom: 1px solid #dddddd;
+
+}
+
+.hours-row:last-child {
+
+    border-bottom: 0;
+
+}
+
+.contact-action {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.contact-action h3 {
+
+    margin: 0 0 12px;
+
+    color: var(--Main-Background);
+
+    font-family: var(--Heading-Font);
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+}
+
+.contact-action p {
+
+    margin: 0 0 25px;
+
+    color: var(--Tertiary-Background);
+
+    font-family: var(--Main-Font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+.contact-button {
+
+    align-self: flex-start;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-hours-card {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .contact-hero,
+    .contact-section,
+    .contact-hours-section {
+
+        padding: 50px 20px;
+
+    }
+
+    .contact-container {
+
+        width: 100%;
+
+    }
+
+    .contact-hero h1 {
+
+        font-size: 36px;
+
+    }
+
+    .contact-hours-card {
+
+        padding: 30px 22px;
+
+    }
+
+    .hours-row {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+}

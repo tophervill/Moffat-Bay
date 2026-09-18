@@ -49,6 +49,10 @@
                 About Us
             </a>
 
+            <a href="${pageContext.request.contextPath}/contactUs.jsp">
+                Contact Us
+            </a>
+
             <a href="#">
                 Account
             </a>

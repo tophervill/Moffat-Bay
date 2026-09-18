@@ -4,6 +4,11 @@
 
     <nav class="navbar">
 
+
+        <!-- =====================================================
+             LOGO
+             ===================================================== -->
+
         <a class="brand"
            href="${pageContext.request.contextPath}/index.jsp">
 
@@ -15,52 +20,66 @@
         </a>
 
 
+        <!-- =====================================================
+             MAIN NAVIGATION
+             ===================================================== -->
 
         <div class="nav-links">
 
-            <a class="nav-link ${pageContext.request.servletPath == '/index.jsp' ? 'active' : ''}"
-               href="${pageContext.request.contextPath}/index.jsp">
+
+            <a
+                class="nav-link ${pageContext.request.servletPath == '/index.jsp' ? 'active' : ''}"
+                href="${pageContext.request.contextPath}/index.jsp">
 
                 Home
 
             </a>
 
-            <a class="nav-link ${pageContext.request.servletPath == '/attractions.jsp' ? 'active' : ''}"
-               href="${pageContext.request.contextPath}/attractions.jsp">
+
+            <a
+                class="nav-link ${pageContext.request.servletPath == '/attractions.jsp' ? 'active' : ''}"
+                href="${pageContext.request.contextPath}/attractions.jsp">
 
                 Attractions
 
             </a>
 
-            <a class="nav-link ${pageContext.request.servletPath == '/about_Us.jsp' ? 'active' : ''}"
-               href="${pageContext.request.contextPath}/about_Us.jsp">
+
+            <a
+                class="nav-link ${pageContext.request.servletPath == '/about_Us.jsp' ? 'active' : ''}"
+                href="${pageContext.request.contextPath}/about_Us.jsp">
 
                 About Us
 
             </a>
 
-            <a class="nav-link ${pageContext.request.servletPath == '/reservationLookup.jsp' ? 'active' : ''}"
-               href="${pageContext.request.contextPath}/reservationLookup.jsp">
+
+            <a
+                class="nav-link ${pageContext.request.servletPath == '/reservationLookup' || pageContext.request.servletPath == '/reservationLookup.jsp' ? 'active' : ''}"
+                href="${pageContext.request.contextPath}/reservationLookup">
 
                 Check Reservation
 
             </a>
 
+
         </div>
 
 
+        <!-- =====================================================
+             ACCOUNT / LOGIN
+             ===================================================== -->
 
         <div class="nav-actions">
 
+
             <%
-
                 String loggedInCustomerName =
-
                         (String) session.getAttribute("customerName");
 
                 if (loggedInCustomerName != null) {
-
             %>
+
 
                 <span class="nav-status">
 
@@ -68,33 +87,33 @@
 
                 </span>
 
-                <a class="nav-link"
-                   href="${pageContext.request.contextPath}/logout">
+
+                <a
+                    class="nav-link"
+                    href="${pageContext.request.contextPath}/logout">
 
                     Logout
 
                 </a>
 
-            <%
 
-                } else {
+            <% } else { %>
 
-            %>
 
-                <a class="nav-link ${pageContext.request.servletPath == '/Login_Page.jsp' ? 'active' : ''}"
-                   href="${pageContext.request.contextPath}/Login_Page.jsp">
+                <a
+                    class="nav-link ${pageContext.request.servletPath == '/Login_Page.jsp' ? 'active' : ''}"
+                    href="${pageContext.request.contextPath}/Login_Page.jsp">
 
                     Log In
 
                 </a>
 
-            <%
 
-                }
+            <% } %>
 
-            %>
 
         </div>
+
 
     </nav>
 

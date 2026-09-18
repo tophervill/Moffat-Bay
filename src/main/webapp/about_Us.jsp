@@ -11,67 +11,295 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Moffat Bay Marina</title>
+    <title>
+        About Us | Moffat Bay Marina
+    </title>
 
     <meta name="description"
-          content="Moffat Bay Marina - Your gateway to coastal adventures.
-          Reserve your boat slip online and explore the beauty of Joviedsa Island.">
+          content="Learn about Moffat Bay Marina, our slip options, pricing, contact information, and marina services on Joviedsa Island.">
 
     <meta name="author"
-          content="CSD460-340 | Group C">
+          content="CSD460-340A | Group C">
 
     <meta name="keywords"
-          content="Moffat Bay Marina, Boat Slip Reservation, Joviedsa Island, Coastal Adventures">
+          content="Moffat Bay Marina, Joviedsa Island, boat slips, marina pricing, marina contact">
+
+
+    <!-- Shared Fonts -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-          href="https://fonts.gstatic.com" crossorigin>
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Mulish:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/about_Us.css">
+
+    <!-- Shared Site Styles -->
+
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/styles.css">
+
+
+    <!-- About Us Page Styles -->
+
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/about_Us.css">
 
 </head>
 
 
-<!-----------------------------------------------------
------About Us Page----->
-
 <body>
 
-<%@ include file="includes/header.jsp" %>
 
-<main class="aboutUs-page">
-	<div class="company-info">
-		<h1>The Moffat Bay Marina Experience – Inexpensive Boating for All </h1>
-			<h2> The Moffat Bay Marina is a recreational boatyard created by the hard-working employees of the 
-	 		San Juan Islands First Nations Development Committee, to provide those who love boating with a 
-	 		fun, affordable, and most importantly a safe option for any occasion with multiple boat size options available 
-	 		from those fitting a small group of friends to the whole family. <br><br>
-	 		Currently we have three slip sizes available for our provided boat lengths which are as follows<br> <br>
-	 		Slip Reservation Pricing:</h2>
-	 		<h3>26 ft Slip: $270<br>
-	 		40 ft Slip: $410<br>
-	 		50 ft Slip: $510<br></h3>
-	 		
-	 		<br><br><h2>For any questions or concerns please contact our customer service team today at MoffatBayMarina@email.com <br> <br>
-	 		
-	 		<br>Company Contact Information:</h2>
-	 		
-	 		<h3>Harbormaster VHF Hail:<br> Channel 16<br>
-	 		<br>Office Phone:<br> (444) 348-4800<br>
-	 		<br>Customer Support Email:<br> MoffatBayMarina@email.com<br>
-	 		<br>Hours of Operation:<br> Monday-Friday 8 AM - 8 PM<br>	Saturday 8 AM - 10 PM<br>		Sunday Closed</h3> <br> <br>
-		<div style="width: 100%; margin: 0 auto;">
-		<img src="${pageContext.request.contextPath}/Images/aboutUs.jpg" width='1400'  alt="Description" />
-		</div>
-	</div>
-</main>
+    <%@ include file="includes/header.jsp" %>
 
-<%@ include file="includes/footer.jsp" %>
+
+    <main class="aboutUs-page">
+
+
+        <!-- =====================================================
+             ABOUT MOFFAT BAY MARINA
+             ===================================================== -->
+
+        <section class="about-section">
+
+            <div class="about-content">
+
+                <p class="about-eyebrow">
+                    MOFFAT BAY MARINA
+                </p>
+
+                <h1>
+                    The Moffat Bay Marina Experience
+                </h1>
+
+                <p class="about-intro">
+
+                    Moffat Bay Marina is a recreational marina created
+                    by the hard-working employees of the San Juan Islands
+                    First Nations Development Committee.
+
+                    Our goal is to provide boating enthusiasts with a fun,
+                    affordable, and safe long-term marina option on
+                    Joviedsa Island.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SLIP INFORMATION
+             ===================================================== -->
+
+        <section class="about-section about-section-light">
+
+            <div class="about-content">
+
+                <h2>
+                    Slip Reservation Pricing
+                </h2>
+
+                <p class="section-description">
+
+                    Monthly slip pricing is based on the actual length
+                    of your registered boat.
+
+                    The current rate is
+                    <strong>$10.50 per foot</strong>
+                    plus a
+                    <strong>$10 electrical service fee</strong>.
+
+                </p>
+
+
+                <div class="pricing-grid">
+
+
+                    <div class="about-card">
+
+                        <h3>
+                            26-Foot Slip
+                        </h3>
+
+                        <p class="pricing-value">
+                            Up to $283/month
+                        </p>
+
+                        <p>
+                            For registered boats measuring
+                            up to 26 feet.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <h3>
+                            40-Foot Slip
+                        </h3>
+
+                        <p class="pricing-value">
+                            Up to $430/month
+                        </p>
+
+                        <p>
+                            For registered boats measuring
+                            more than 26 feet and up to 40 feet.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <h3>
+                            50-Foot Slip
+                        </h3>
+
+                        <p class="pricing-value">
+                            Up to $535/month
+                        </p>
+
+                        <p>
+                            For registered boats measuring
+                            more than 40 feet and up to 50 feet.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <p class="pricing-note">
+
+                    Your exact monthly cost is calculated using your
+                    registered boat length rather than the maximum
+                    length of the assigned slip.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT INFORMATION
+             ===================================================== -->
+
+        <section class="about-section">
+
+            <div class="about-content">
+
+                <h2>
+                    Contact Moffat Bay Marina
+                </h2>
+
+                <p class="section-description">
+
+                    For questions or concerns, contact our marina team
+                    using the information below.
+
+                </p>
+
+
+                <div class="contact-grid">
+
+
+                    <div class="about-card contact-card">
+
+                        <span class="contact-label">
+                            Harbormaster VHF Hail
+                        </span>
+
+                        <span class="contact-value">
+                            Channel 68
+                        </span>
+
+                    </div>
+
+
+                    <div class="about-card contact-card">
+
+                        <span class="contact-label">
+                            Office Phone
+                        </span>
+
+                        <span class="contact-value">
+                            (444) 348-4800
+                        </span>
+
+                    </div>
+
+
+                    <div class="about-card contact-card">
+
+                        <span class="contact-label">
+                            Customer Support Email
+                        </span>
+
+                        <a class="contact-value"
+                           href="mailto:MoffatBayMarina@email.com">
+
+                            MoffatBayMarina@email.com
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="about-card contact-card">
+
+                        <span class="contact-label">
+                            Hours of Operation
+                        </span>
+
+                        <span class="contact-value">
+
+                            Monday-Friday: 8 AM - 8 PM<br>
+                            Saturday: 8 AM - 10 PM<br>
+                            Sunday: Closed
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MARINA IMAGE
+             ===================================================== -->
+
+        <section class="about-image-section">
+
+            <img
+                class="about-image"
+                src="${pageContext.request.contextPath}/Images/aboutUs.jpg"
+                alt="Moffat Bay Marina">
+
+        </section>
+
+
+    </main>
+
+
+    <%@ include file="includes/footer.jsp" %>
+
 
 </body>
 

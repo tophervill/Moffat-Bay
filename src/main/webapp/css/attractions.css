@@ -1,0 +1,614 @@
+/* =========================================================
+   MOFFAT BAY MARINA
+   ATTRACTIONS PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.attractions-page {
+
+    width: 100%;
+
+    background-color: var(--Main-Background);
+
+    color: var(--Muted-Text);
+
+}
+
+.attractions-container {
+
+    width: 90%;
+
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.attractions-hero {
+
+    padding: 80px 20px 70px;
+
+    background-color: var(--Main-Background);
+
+}
+
+.attractions-eyebrow {
+
+    margin: 0 0 10px;
+
+    color: var(--Accent);
+
+    font-family: var(--Main-Font);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+.attractions-hero h1 {
+
+    max-width: 850px;
+
+    margin: 0 0 22px;
+
+    color: white;
+
+    font-family: var(--Heading-Font);
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+}
+
+.attractions-intro {
+
+    max-width: 850px;
+
+    margin: 0;
+
+    color: var(--Muted-Text);
+
+    font-family: var(--Main-Font);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   ATTRACTIONS SECTION
+   ========================================================= */
+
+.attractions-section {
+
+    padding: 75px 20px 85px;
+
+    background-color: var(--Secondary-Background);
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+
+    max-width: 800px;
+
+    margin-bottom: 40px;
+
+}
+
+.section-heading h2 {
+
+    margin: 0 0 15px;
+
+    color: var(--Main-Background);
+
+    font-family: var(--Heading-Font);
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+}
+
+.section-heading > p:last-child {
+
+    margin: 0;
+
+    color: var(--Tertiary-Background);
+
+    font-family: var(--Main-Font);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   ATTRACTION GRID
+   ========================================================= */
+
+.attractions-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+
+    align-items: stretch;
+
+}
+
+
+/* =========================================================
+   ATTRACTION CARD
+   ========================================================= */
+
+.attraction-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background-color: var(--cards);
+
+    border-radius: 12px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+.attraction-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.19);
+
+}
+
+
+/* =========================================================
+   ATTRACTION IMAGE
+   ========================================================= */
+
+.attraction-image-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 270px;
+
+    overflow: hidden;
+
+}
+
+.attraction-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+
+}
+
+.attraction-card:hover .attraction-image {
+
+    transform: scale(1.035);
+
+}
+
+.attraction-category {
+
+    position: absolute;
+
+    left: 18px;
+
+    bottom: 18px;
+
+    padding: 7px 13px;
+
+    color: white;
+
+    background-color: rgba(13, 27, 42, 0.88);
+
+    border-radius: 20px;
+
+    font-family: var(--Main-Font);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.attraction-card-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 28px;
+
+}
+
+.attraction-card h3 {
+
+    margin: 0 0 8px;
+
+    color: var(--Main-Background);
+
+    font-family: var(--Heading-Font);
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+}
+
+.attraction-tagline {
+
+    margin: 0 0 18px;
+
+    color: var(--Accent);
+
+    font-family: var(--Main-Font);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+}
+
+.attraction-summary {
+
+    margin: 0 0 22px;
+
+    color: var(--Tertiary-Background);
+
+    font-family: var(--Main-Font);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+.attraction-extra {
+
+    margin: 22px 0 0;
+
+    color: #62676d;
+
+    font-family: var(--Main-Font);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   HIGHLIGHT TAGS
+   ========================================================= */
+
+.attraction-highlights {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: auto;
+
+}
+
+.attraction-highlights span {
+
+    padding: 6px 10px;
+
+    color: var(--Main-Background);
+
+    background-color: #e5ecea;
+
+    border-radius: 18px;
+
+    font-family: var(--Main-Font);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   CALL TO ACTION
+   ========================================================= */
+
+.attractions-cta {
+
+    padding: 75px 20px;
+
+    background-color: var(--Main-Background);
+
+}
+
+.attractions-cta-card {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 45px 50px;
+
+    background-color: var(--cards);
+
+    border-radius: 12px;
+
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+
+}
+
+.cta-content {
+
+    max-width: 800px;
+
+}
+
+.cta-content h2 {
+
+    margin: 0 0 14px;
+
+    color: var(--Main-Background);
+
+    font-family: var(--Heading-Font);
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+}
+
+.cta-content > p:last-child {
+
+    margin: 0;
+
+    color: var(--Tertiary-Background);
+
+    font-family: var(--Main-Font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.attractions-button {
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    color: white;
+
+    background-color: var(--Accent);
+
+    border-radius: 7px;
+
+    font-family: var(--Main-Font);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+.attractions-button:hover {
+
+    color: white;
+
+    background-color: #155b5e;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1050px) {
+
+    .attractions-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL TABLET
+   ========================================================= */
+
+@media screen and (max-width: 750px) {
+
+    .attractions-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .attraction-image-wrapper {
+
+        height: 340px;
+
+    }
+
+    .attractions-cta-card {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+    .cta-action {
+
+        justify-self: start;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 550px) {
+
+    .attractions-container {
+
+        width: 100%;
+
+    }
+
+    .attractions-hero {
+
+        padding: 55px 20px;
+
+    }
+
+    .attractions-hero h1 {
+
+        font-size: 36px;
+
+    }
+
+    .attractions-intro {
+
+        font-size: 16px;
+
+    }
+
+    .attractions-section {
+
+        padding: 55px 20px 65px;
+
+    }
+
+    .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+    .attraction-image-wrapper {
+
+        height: 240px;
+
+    }
+
+    .attraction-card-content {
+
+        padding: 24px 22px;
+
+    }
+
+    .attractions-cta {
+
+        padding: 55px 20px;
+
+    }
+
+    .attractions-cta-card {
+
+        padding: 32px 24px;
+
+    }
+
+    .cta-content h2 {
+
+        font-size: 29px;
+
+    }
+
+    .attractions-button {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}

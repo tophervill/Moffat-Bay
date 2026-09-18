@@ -8,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.moffatbay.util.DBUtil;
 
@@ -590,6 +592,126 @@ public class ReservationDAO {
         }
 
         return null;
+    }
+
+
+    /*
+     * Retrieves all reservations belonging to a specific customer.
+     *
+     * Newest reservations are returned first.
+     */
+    public List<ReservationInfo> getReservationsForCustomer(
+            int customerId)
+            throws SQLException {
+
+        List<ReservationInfo> reservations =
+                new ArrayList<>();
+
+        String sql =
+                "SELECT "
+                + "r.reservation_id, "
+                + "c.customer_id, "
+                + "c.email, "
+                + "b.boat_id, "
+                + "b.boat_name, "
+                + "b.boat_length, "
+                + "s.slip_id, "
+                + "s.slip_number, "
+                + "ss.size_ft, "
+                + "r.check_in_date, "
+                + "r.check_out_date, "
+                + "r.monthly_cost, "
+                + "r.status "
+                + "FROM Reservation r "
+                + "JOIN Boat b "
+                + "ON r.boat_id = b.boat_id "
+                + "JOIN Customer c "
+                + "ON b.customer_id = c.customer_id "
+                + "JOIN Slip s "
+                + "ON r.slip_id = s.slip_id "
+                + "JOIN SlipSize ss "
+                + "ON s.slip_size_id = ss.slip_size_id "
+                + "WHERE c.customer_id = ? "
+                + "ORDER BY r.reservation_id DESC";
+
+        try (
+                Connection connection =
+                        DBUtil.getConnection();
+
+                PreparedStatement statement =
+                        connection.prepareStatement(sql)
+        ) {
+
+            statement.setInt(
+                    1,
+                    customerId
+            );
+
+            try (ResultSet result =
+                    statement.executeQuery()) {
+
+                while (result.next()) {
+
+                    reservations.add(
+                            new ReservationInfo(
+                                    result.getInt(
+                                            "reservation_id"
+                                    ),
+
+                                    result.getInt(
+                                            "customer_id"
+                                    ),
+
+                                    result.getString(
+                                            "email"
+                                    ),
+
+                                    result.getInt(
+                                            "boat_id"
+                                    ),
+
+                                    result.getString(
+                                            "boat_name"
+                                    ),
+
+                                    result.getDouble(
+                                            "boat_length"
+                                    ),
+
+                                    result.getInt(
+                                            "slip_id"
+                                    ),
+
+                                    result.getString(
+                                            "slip_number"
+                                    ),
+
+                                    result.getInt(
+                                            "size_ft"
+                                    ),
+
+                                    result.getDate(
+                                            "check_in_date"
+                                    ).toLocalDate(),
+
+                                    result.getDate(
+                                            "check_out_date"
+                                    ).toLocalDate(),
+
+                                    result.getBigDecimal(
+                                            "monthly_cost"
+                                    ),
+
+                                    result.getString(
+                                            "status"
+                                    )
+                            )
+                    );
+                }
+            }
+        }
+
+        return reservations;
     }
 
 

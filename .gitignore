@@ -1,4 +1,6 @@
-# Eclipse project files (https://github.com/github/gitignore/blob/main/Global/Eclipse.gitignore)
+# Eclipse project files
+# https://github.com/github/gitignore/blob/main/Global/Eclipse.gitignore
+
 .metadata
 bin/
 tmp/
@@ -11,70 +13,95 @@ local.properties
 .loadpath
 .recommenders
 
+
 # External tool builders
 .externalToolBuilders/
 
-# Locally stored "Eclipse launch configurations"
+
+# Locally stored Eclipse launch configurations
 *.launch
 
-# PyDev specific (Python IDE for Eclipse)
+
+# PyDev specific
 *.pydevproject
 
-# CDT-specific (C/C++ Development Tooling)
+
+# CDT-specific
 .cproject
 
-# CDT- autotools
+
+# CDT autotools
 .autotools
+
 
 # Java annotation processor (APT)
 .factorypath
 
-# PDT-specific (PHP Development Tools)
+
+# PDT-specific
 .buildpath
+
 
 # sbteclipse plugin
 .target
 
+
 # Tern plugin
 .tern-project
+
 
 # TeXlipse plugin
 .texlipse
 
+
 # STS (Spring Tool Suite)
 .springBeans
 
+
 # Code Recommenders
 .recommenders/
+
 
 # Annotation Processing
 .apt_generated/
 .apt_generated_tests/
 
-# Scala IDE specific (Scala & Java development for Eclipse)
+
+# Scala IDE specific
 .cache-main
 .scala_dependencies
 .worksheet
 
-# Uncomment this line if you wish to ignore the project description file.
-# Typically, this file would be tracked if it contains build/dependency configurations:
-#.project
 
-# Java files (https://github.com/github/gitignore/blob/main/Java.gitignore)
+# Keep the Eclipse project description tracked.
+# .project
 
-# Compiled class file
+
+# =========================================================
+# JAVA
+# =========================================================
+
+# Compiled class files
 *.class
 
-# Log file
+
+# Log files
 *.log
+
 
 # BlueJ files
 *.ctxt
 
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+
+# =========================================================
+# PACKAGE FILES
+# =========================================================
+
+# Ignore package/archive files by default
 *.jar
 *.war
 *.nar
@@ -83,9 +110,34 @@ local.properties
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+
+# =========================================================
+# REQUIRED MOFFAT BAY LIBRARIES
+# =========================================================
+
+# The Moffat Bay web application requires this JDBC driver.
+# Keep this specific JAR tracked so every team member receives
+# the same MySQL connector when cloning or pulling the project.
+!src/main/webapp/WEB-INF/lib/mysql-connector-j-26.7.0.jar
+
+
+# =========================================================
+# BUILD OUTPUT
+# =========================================================
+
+/build/
+
+
+# =========================================================
+# JVM CRASH FILES
+# =========================================================
+
 hs_err_pid*
 replay_pid*
 
-# MacOS DS_Store files
+
+# =========================================================
+# MACOS
+# =========================================================
+
 .DS_Store
