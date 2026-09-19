@@ -3,6 +3,9 @@
    LOGIN PAGE
    ========================================================= */
 
+body {
+	background-color: var(--Main-Background) !important;
+}
 
 /* =========================================================
    LOGIN PAGE
@@ -10,17 +13,9 @@
 
 .login-page {
 
-    align-items: center;
-
     background-color: var(--Main-Background);
 
-    display: grid;
-
-    gap: 70px;
-
-    grid-template-columns: 0.85fr 1.15fr;
-
-    min-height: calc(100vh - 60px);
+    min-height: calc(80vh - 60px);
 
     padding: 65px 5% 80px;
 
@@ -35,7 +30,9 @@
 
     width: 100%;
 
-    max-width: 680px;
+    max-width: 580px;
+    
+    margin: 0 auto;
 
 }
 
@@ -47,11 +44,9 @@
 
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
 
-    overflow: auto;
-
-    transform: translate(850px, 0px);
-
     width: 100%;
+    
+    padding: 30px 25px;
 
 }
 
@@ -70,15 +65,6 @@
    LOGIN FORM
    ========================================================= */
 
-.login-form {
-
-    display: grid;
-
-    gap: 20px;
-
-    grid-template-columns: 1fr 1fr;
-
-}
 
 .card-description {
 
@@ -89,10 +75,6 @@
     margin-top: -5px;
 
     margin-bottom: 25px;
-
-    text-align: center;
-
-    white-space: nowrap;
 
 }
 
@@ -124,18 +106,16 @@
     text-align: center;
 
     text-decoration: none;
+    
+    width: 100%;
 
     transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-
+        opacity 0.2s ease;
 }
 
 .sign-button:hover {
 
     opacity: 0.9;
-
-    transform: translateY(-1px);
 
 }
 
@@ -153,8 +133,6 @@
     margin-top: 25px;
 
     text-align: center;
-
-    transform: translateX(75px);
 
 }
 
@@ -181,13 +159,6 @@
 
 @media screen and (max-width: 950px) {
 
-    .login-page {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-    }
 
     .login-form-wrapper {
 
@@ -204,34 +175,6 @@
 
 @media screen and (max-width: 600px) {
 
-    .login-page {
 
-        padding: 45px 20px 60px;
-
-    }
-
-    .login-card {
-
-        padding: 25px 20px;
-
-    }
-
-    .login-form {
-
-        grid-template-columns: 1fr;
-
-    }
-
-    .login-error {
-
-        padding: 13px 14px;
-
-    }
-
-    .sign-button {
-
-        width: 100%;
-
-    }
 
 }
