@@ -92,10 +92,22 @@
                           method="GET">
 
                         <div class="form-row">
+							
+							<%
+				                if (loggedInCustomerName != null) {
+				            %>
 
-                            <input
+			                <input
+                                type="submit"
+                                value="Reserve an Available Slip">
+				
+				            <% } else { %>
+				
+				            <input
                                 type="submit"
                                 value="Login to Reserve an Available Slip">
+				
+				            <% } %>
 
                         </div>
 
