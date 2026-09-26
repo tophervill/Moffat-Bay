@@ -879,4 +879,37 @@ public class ReservationDAO {
             return statement.executeUpdate() > 0;
         }
     }
+    
+    /*
+    * 	Returns the number of customers currently waiting for a specific slip size.
+    */
+    
+    public int getWaitListCount(int slipSizeId) throws SQLException {
+
+        int count = 0;
+
+        String sql =
+                "SELECT COUNT(*) AS waitlist_count "
+                + "FROM WaitList "
+                + "WHERE slip_size_id = ? "
+                + "AND status = 'waiting'";
+
+        try (
+                Connection connection = DBUtil.getConnection();
+                PreparedStatement statement = connection.prepareStatement(sql)
+        ) {
+
+            statement.setInt(1, slipSizeId);
+
+            try (ResultSet result = statement.executeQuery()) {
+
+                if (result.next()) {
+
+                    count = result.getInt("waitlist_count");
+                }
+            }
+        }
+
+        return count;
+    }
 }
