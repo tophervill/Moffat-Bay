@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+body {
+	background-color: var(--Main-Background);
+}
+
+.waitlist-page {
+    width: 100%;
+    min-height: 700px;
+    background-color: var(--Main-Background);
+    color: var(--Muted-Text);
+}
+
+.waitlist-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* HERO */
+
+.waitlist-hero {
+    padding: 70px 20px 55px;
+    background-color: var(--Main-Background);
+}
+
+.waitlist-eyebrow {
+    margin: 0 0 10px;
+    color: var(--Accent);
+    font-family: var(--Main-Font);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.waitlist-hero h1 {
+    margin: 0 0 18px;
+    color: white;
+    font-family: var(--Heading-Font);
+    font-size: 44px;
+    font-weight: 400;
+}
+
+.waitlist-intro {
+    max-width: 760px;
+    margin: 0;
+    color: var(--Muted-Text);
+    font-family: var(--Main-Font);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* WAITLIST SECTION */
+
+.waitlist-section {
+    padding: 65px 20px 80px;
+    min-height: 500px;
+    background-color: var(--Secondary-Background);
+}
+
+.waitlist-content {
+	text-align: center;
+	margin: 50px 0 0;
+}
+
+.waitlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    place-content: center;
+}
+
+/* WAITLIST CARD */
+
+.waitlist-card {
+    padding: 35px 25px;
+    text-align: center;
+    background-color: var(--cards);
+    border-radius: var(--Border-Radius);
+    box-shadow: var(--Card-Shadow);
+}
+
+.waitlist-label {
+    margin: 0 0 10px;
+    color: var(--Accent);
+    font-family: var(--Main-Font);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.waitlist-card h2 {
+    margin: 0;
+    color: var(--Main-Background);
+    font-family: var(--Heading-Font);
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.waitlist-count {
+    margin: 25px 0 5px;
+    color: var(--Main-Background);
+    font-family: var(--Heading-Font);
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.waitlist-status {
+    margin: 0;
+    color: var(--Tertiary-Background);
+    font-family: var(--Main-Font);
+    font-size: 16px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .waitlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .waitlist-hero h1 {
+        font-size: 36px;
+    }
+
+}
