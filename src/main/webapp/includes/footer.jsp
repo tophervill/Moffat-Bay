@@ -34,7 +34,7 @@
                 Reservations
             </a>
 
-            <a href="#">
+            <a href="${pageContext.request.contextPath}/waitingList.jsp">
                 Wait List
             </a>
 
@@ -53,8 +53,8 @@
                 Contact Us
             </a>
 
-            <a href="#">
-                Account
+            <a href="${pageContext.request.contextPath}/register.jsp">
+                Account Registration
             </a>
 
         </div>
