@@ -132,6 +132,10 @@
         <h2>
             Check Out Our Pricing
         </h2>
+        
+        <p class="pricing-text">
+        	Monthly slip pricing is based on the actual length of your registered boat. The current rate is $10.50 per foot plus a $10 electrical service fee.
+        </p>
 
         <div class="pricing-cards">
 

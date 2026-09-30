@@ -113,7 +113,7 @@ input {
 
     display: flex;
 
-    align-items: center;
+    justify-content: space-between;
 
     gap: 18px;
 
@@ -131,8 +131,6 @@ input {
     width: 400px;
 
     height: 60px;
-
-    margin-right: auto;
 
     display: flex;
 
