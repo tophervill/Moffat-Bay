@@ -88,6 +88,16 @@
                     Joviedsa Island.
 
                 </p>
+                
+                <div class="image-wrapper">
+                
+                	<p class="image-text">
+                		Below you will see the mapping of our Marina to gain an understanding of our availability for the provided slip sizes.
+                	</p>
+                	
+                	<img id="marina-port-image" src="Images/marina_a.png" width="500px" height="auto">
+                
+                </div>
 
             </div>
 
