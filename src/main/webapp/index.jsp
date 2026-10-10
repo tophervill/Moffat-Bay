@@ -163,11 +163,11 @@
 
                     <li>
 
-                        Estimated Costs:
+                        Estimated Costs: <br/>
 
                         <span>
 
-                            Up to $283.00 at 26 Feet
+                            Up to $283.00/month at 26 Feet
 
                         </span>
 
@@ -207,11 +207,11 @@
 
                     <li>
 
-                        Estimated Costs:
+                        Estimated Costs: <br/>
 
                         <span>
 
-                            Up to $430.00 at 40 Feet
+                            Up to $430.00/month at 40 Feet
 
                         </span>
 
@@ -251,11 +251,11 @@
 
                     <li>
 
-                        Estimated Costs:
+                        Estimated Costs: <br/>
 
                         <span>
 
-                            Up to $535.00 at 50 Feet
+                            Up to $535.00/month at 50 Feet
 
                         </span>
 
