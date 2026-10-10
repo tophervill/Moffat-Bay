@@ -171,10 +171,16 @@ h2 {
     background-color: var(--cards);
     border-radius: 10px;
     padding: 20px;
-    width: 250px;
+    width: 350px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 65%;
     transition: 0.3s ease;
+}
+
+.card span {
+	line-height: 5;
+	font-size: 1.1em;
+	font-weight: bold;
 }
 
 .pricing-cards .card:hover {
